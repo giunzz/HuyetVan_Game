@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76260141560d14a44911ea5541c65487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeMenuController
-  firstSceneName: 01_IntroCinematic
+  firstSceneName: 01_Intro
 --- !u!4 &1322401757
 Transform:
   m_ObjectHideFlags: 0
