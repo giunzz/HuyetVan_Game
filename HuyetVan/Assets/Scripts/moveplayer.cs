@@ -1,97 +1,119 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using TMPro;
 
-[RequireComponent(typeof(CharacterController))]
-public class moveplayer : MonoBehaviour
+public class movePlayer : MonoBehaviour
 {
-    public Camera playerCamera;
+    [Header("Movement")]
+    public float moveSpeed;
 
-    public float walkSpeed = 6f;
-    public float runSpeed = 12f;
-    public float jumpPower = 7f;
-    public float gravity = 20f;
+    public float groundDrag;
 
-    public float lookSpeed = 2f;
-    public float lookXLimit = 45f;
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier;
+    bool readyToJump;
 
-    public float defaultHeight = 2f;
-    public float crouchHeight = 1f;
-    public float crouchSpeed = 3f;
+    [HideInInspector] public float walkSpeed;
+    [HideInInspector] public float sprintSpeed;
 
-    private Vector3 moveDirection;
-    private float rotationX = 0f;
-    private CharacterController controller;
+    [Header("Keybinds")]
+    public KeyCode jumpKey = KeyCode.Space;
 
-    void Start()
+    [Header("Ground Check")]
+    public float playerHeight;
+    public LayerMask whatIsGround;
+    bool grounded;
+
+    public Transform orientation;
+
+    float horizontalInput;
+    float verticalInput;
+
+    Vector3 moveDirection;
+
+    Rigidbody rb;
+
+    private void Start()
     {
-        controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        readyToJump = true;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Keyboard.current == null || Mouse.current == null)
-            return;
+        // ground check
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
 
-        Move();
-        Look();
-    }
+        MyInput();
+        SpeedControl();
 
-    void Move()
-    {
-        bool isGrounded = controller.isGrounded;
-
-        if (isGrounded && moveDirection.y < 0)
-        {
-            moveDirection.y = -2f; // giữ dính mặt đất
-        }
-
-        float vertical = 0f;
-        float horizontal = 0f;
-
-        if (Keyboard.current.wKey.isPressed) vertical += 1f;
-        if (Keyboard.current.sKey.isPressed) vertical -= 1f;
-        if (Keyboard.current.aKey.isPressed) horizontal -= 1f;
-        if (Keyboard.current.dKey.isPressed) horizontal += 1f;
-
-        bool isRunning = Keyboard.current.leftShiftKey.isPressed;
-        float speed = isRunning ? runSpeed : walkSpeed;
-
-        Vector3 move = transform.forward * vertical + transform.right * horizontal;
-        controller.Move(move.normalized * speed * Time.deltaTime);
-
-        // Jump
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
-        {
-            moveDirection.y = jumpPower;
-        }
-
-        // Gravity
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
-
-        // Crouch (giữ R)
-        if (Keyboard.current.rKey.isPressed)
-        {
-            controller.height = crouchHeight;
-            speed = crouchSpeed;
-        }
+        // handle drag
+        if (grounded)
+            rb.linearDamping = groundDrag;
         else
+            rb.linearDamping = 0;
+    }
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    private void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
+        // when to jump
+        if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
-            controller.height = defaultHeight;
+            readyToJump = false;
+
+            Jump();
+
+            Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
 
-    void Look()
+    private void MovePlayer()
     {
-        Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+        // calculate movement direction
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        rotationX -= mouseDelta.y * lookSpeed * 0.1f;
-        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        // on ground
+        if(grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
-        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        transform.Rotate(Vector3.up * mouseDelta.x * lookSpeed * 0.1f);
+        // in air
+        else if(!grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+    }
+
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+        // limit velocity if needed
+        if(flatVel.magnitude > moveSpeed)
+        {
+            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+        }
+    }
+
+    private void Jump()
+    {
+        // reset y velocity
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    }
+    private void ResetJump()
+    {
+        readyToJump = true;
     }
 }
