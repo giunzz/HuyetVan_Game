@@ -1,119 +1,127 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class movePlayer : MonoBehaviour
+/*
+    This script provides jumping and movement in Unity 3D - Gatsby
+*/
+
+public class moveplayer : MonoBehaviour
 {
-    [Header("Movement")]
-    public float moveSpeed;
+    // Camera Rotation
+    public float mouseSensitivity = 2f;
+    private float verticalRotation = 0f;
+    private Transform cameraTransform;
+    
+    // Ground Movement
+    private Rigidbody rb;
+    public float MoveSpeed = 5f;
+    private float moveHorizontal;
+    private float moveForward;
 
-    public float groundDrag;
+    // Jumping
+    public float jumpForce = 10f;
+    public float fallMultiplier = 2.5f; // Multiplies gravity when falling down
+    public float ascendMultiplier = 2f; // Multiplies gravity for ascending to peak of jump
+    private bool isGrounded = true;
+    public LayerMask groundLayer;
+    private float groundCheckTimer = 0f;
+    private float groundCheckDelay = 0.3f;
+    private float playerHeight;
+    private float raycastDistance;
 
-    public float jumpForce;
-    public float jumpCooldown;
-    public float airMultiplier;
-    bool readyToJump;
-
-    [HideInInspector] public float walkSpeed;
-    [HideInInspector] public float sprintSpeed;
-
-    [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space;
-
-    [Header("Ground Check")]
-    public float playerHeight;
-    public LayerMask whatIsGround;
-    bool grounded;
-
-    public Transform orientation;
-
-    float horizontalInput;
-    float verticalInput;
-
-    Vector3 moveDirection;
-
-    Rigidbody rb;
-
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        cameraTransform = Camera.main.transform;
 
-        readyToJump = true;
+        // Set the raycast to be slightly beneath the player's feet
+        playerHeight = GetComponent<CapsuleCollider>().height * transform.localScale.y;
+        raycastDistance = (playerHeight / 2) + 0.2f;
+
+        // Hides the mouse
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    private void Update()
+    void Update()
     {
-        // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveForward = Input.GetAxisRaw("Vertical");
 
-        MyInput();
-        SpeedControl();
+        RotateCamera();
 
-        // handle drag
-        if (grounded)
-            rb.linearDamping = groundDrag;
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            Jump();
+        }
+
+        // Checking when we're on the ground and keeping track of our ground check delay
+        if (!isGrounded && groundCheckTimer <= 0f)
+        {
+            Vector3 rayOrigin = transform.position + Vector3.up * 0.1f;
+            isGrounded = Physics.Raycast(rayOrigin, Vector3.down, raycastDistance, groundLayer);
+        }
         else
-            rb.linearDamping = 0;
+        {
+            groundCheckTimer -= Time.deltaTime;
+        }
+
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         MovePlayer();
+        ApplyJumpPhysics();
     }
 
-    private void MyInput()
+    void MovePlayer()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
 
-        // when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        Vector3 movement = (transform.right * moveHorizontal + transform.forward * moveForward).normalized;
+        Vector3 targetVelocity = movement * MoveSpeed;
+
+        // Apply movement to the Rigidbody
+        Vector3 velocity = rb.linearVelocity;
+        velocity.x = targetVelocity.x;
+        velocity.z = targetVelocity.z;
+        rb.linearVelocity = velocity;
+
+        // If we aren't moving and are on the ground, stop velocity so we don't slide
+        if (isGrounded && moveHorizontal == 0 && moveForward == 0)
         {
-            readyToJump = false;
-
-            Jump();
-
-            Invoke(nameof(ResetJump), jumpCooldown);
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
         }
     }
 
-    private void MovePlayer()
+    void RotateCamera()
     {
-        // calculate movement direction
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        float horizontalRotation = Input.GetAxis("Mouse X") * mouseSensitivity;
+        transform.Rotate(0, horizontalRotation, 0);
 
-        // on ground
-        if(grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+        verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
 
-        // in air
-        else if(!grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        cameraTransform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
     }
 
-    private void SpeedControl()
+    void Jump()
     {
-        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        isGrounded = false;
+        groundCheckTimer = groundCheckDelay;
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z); // Initial burst for the jump
+    }
 
-        // limit velocity if needed
-        if(flatVel.magnitude > moveSpeed)
+    void ApplyJumpPhysics()
+    {
+        if (rb.linearVelocity.y < 0) 
         {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+            // Falling: Apply fall multiplier to make descent faster
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.fixedDeltaTime;
+        } // Rising
+        else if (rb.linearVelocity.y > 0)
+        {
+            // Rising: Change multiplier to make player reach peak of jump faster
+            rb.linearVelocity += Vector3.up * Physics.gravity.y * ascendMultiplier  * Time.fixedDeltaTime;
         }
-    }
-
-    private void Jump()
-    {
-        // reset y velocity
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-    private void ResetJump()
-    {
-        readyToJump = true;
     }
 }
