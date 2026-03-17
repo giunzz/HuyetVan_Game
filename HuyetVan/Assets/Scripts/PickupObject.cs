@@ -3,7 +3,10 @@ using UnityEngine;
 public class PickupObject : MonoBehaviour
 {
     public Transform holdPoint;
-    GameObject heldObject;
+    public float pickupRange = 5f;
+
+    private GameObject heldObject;
+    private Rigidbody heldRb;
 
     void Update()
     {
@@ -22,32 +25,48 @@ public class PickupObject : MonoBehaviour
 
     void TryPickup()
     {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(Camera.main.transform.position,
-                            Camera.main.transform.forward,
-                            out hit, 5f))
-        {
-            if (hit.collider.CompareTag("Pickable"))
-            {
-                heldObject = hit.collider.gameObject;
+        // 🔴 VẼ TIA RAY (nhìn trong Scene)
+        Debug.DrawRay(ray.origin, ray.direction * pickupRange, Color.red, 2f);
 
-                Rigidbody rb = heldObject.GetComponent<Rigidbody>();
-                rb.isKinematic = true;
+        if (Physics.Raycast(ray, out hit, pickupRange))
+        {
+            // 🔵 XEM RAY ĐANG CHẠM CÁI GÌ
+            Debug.Log("Hit: " + hit.collider.name);
+
+            if (hit.collider.CompareTag("Pickup"))
+            {
+                Debug.Log("ĐÚNG OBJECT → PICKUP");
+
+                heldObject = hit.collider.gameObject;
+                heldRb = heldObject.GetComponent<Rigidbody>();
+
+                heldRb.useGravity = false;
+                heldRb.isKinematic = true;
 
                 heldObject.transform.position = holdPoint.position;
                 heldObject.transform.parent = holdPoint;
             }
+            else
+            {
+                Debug.Log("Sai tag: " + hit.collider.tag);
+            }
+        }
+        else
+        {
+            Debug.Log("KHÔNG HIT GÌ");
         }
     }
-
     void DropObject()
     {
+        heldRb.useGravity = true;
+        heldRb.isKinematic = false;
+
         heldObject.transform.parent = null;
 
-        Rigidbody rb = heldObject.GetComponent<Rigidbody>();
-        rb.isKinematic = false;
-
         heldObject = null;
+        heldRb = null;
     }
 }
