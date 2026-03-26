@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/UI/MenuStyle.uss?fileID=7433441132597879392&amp;guid=eb66a5447ddfd824f96370cb1c9bb158&amp;type=3#MenuStyle" />
+    <ui:VisualElement style="flex-grow: 1; padding-left: 60px; padding-top: 30px; padding-right: 60px; padding-bottom: 30px; background-color: rgb(255, 255, 255);">
+        <ui:Label text="Made by Corrupted Circuit" name="CreatorID" class="text" style="font-size: 48px; letter-spacing: 2px; padding-top: 2px; padding-right: 3px; padding-bottom: 2px; padding-left: 3px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        <ui:VisualElement style="margin-top: 0; padding-left: 15px; padding-right: 15px; padding-top: 60px; padding-bottom: 60px; flex-direction: row; justify-content: space-around;">
+            <ui:VisualElement>
+                <ui:Label text="Tile Puzzle" name="Name" class="text" style="font-size: 85px; letter-spacing: 3px;" />
+                <ui:Label text="Catch your, Sliding &#10;Tiles." name="Catchline" class="text" style="font-size: 45px; opacity: 0.4; -unity-paragraph-spacing: -15px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/UI/Icons/App%20Icon.png?fileID=2800000&amp;guid=5ea65be53f6c4cb40ae9dceebb2ae22c&amp;type=3#App Icon&quot;); background-position-x: right 0; background-size: contain; align-items: flex-end;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; padding-top: 70px; padding-left: 15px; padding-bottom: 70px; padding-right: 15px;">
+            <ui:Label text="Levels" class="text" style="font-size: 45px; letter-spacing: 7px;" />
+            <ui:ScrollView touch-scroll-type="Elastic" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,32 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/UI/CustomEditorStyle.uss?fileID=7433441132597879392&amp;guid=8e50cd0dbb83e1641ac9b3ab2e6fcb81&amp;type=3#CustomEditorStyle" />
+    <Style src="project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/UI/CustomElementStyle.uss?fileID=7433441132597879392&amp;guid=38b6b5f9a9c346243aeb07e741ef3784&amp;type=3#CustomElementStyle" />
+    <ui:Label text="Set Up" class="centeredGreyMiniLabel" />
+    <ui:Button text="Activate" />
+    <ui:Label text="Main Menu Settings" class="centeredGreyMiniLabel" />
+    <ui:VisualElement style="flex-direction: row;">
+        <ui:VisualElement name="Image" style="height: 100px; width: 100px; background-color: rgb(46, 46, 46); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(28, 28, 28); border-right-color: rgb(28, 28, 28); border-top-color: rgb(28, 28, 28); border-bottom-color: rgb(28, 28, 28); -unity-background-scale-mode: scale-to-fit; display: flex; flex-direction: row; align-self: center;">
+            <ui:VisualElement style="flex-grow: 1; position: absolute; height: 20%; width: 60%; align-self: flex-end; background-color: rgb(55, 55, 55); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 0; border-left-color: rgb(28, 28, 28); border-right-color: rgb(28, 28, 28); border-top-color: rgb(28, 28, 28); border-bottom-color: rgb(28, 28, 28);">
+                <ui:Label text="Select" style="align-self: center; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; -unity-text-align: middle-left; font-size: 10px;" />
+            </ui:VisualElement>
+            <uie:ObjectField type="UnityEngine.Sprite, UnityEngine.CoreModule" binding-path="_Icon" class="obj" style="width: 100%; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; opacity: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:VisualElement style="flex-grow: 1;">
+                    <ui:TextField placeholder-text="Game Name" binding-path="_Name" style="flex-grow: 1; flex-shrink: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:TextField multiline="true" placeholder-text="Catchline" binding-path="_Catchline" class="textfield" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Label text="General Settings" class="centeredGreyMiniLabel" />
+    <ui:VisualElement name="Draw" style="flex-grow: 1;" />
+    <ui:Label text="Other Settings" class="centeredGreyMiniLabel" />
+    <ui:VisualElement />
+    <ui:TabView class="helpBox tab" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+        <ui:Tab label="Levels">
+            <ui:ListView virtualization-method="DynamicHeight" show-bound-collection-size="false" show-add-remove-footer="true" show-border="false" name="LevelList" binding-path="_Levels" item-template="project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/Scripts/Editor/UITK/Levels.uxml?fileID=9197481963319205126&amp;guid=fe7f605493e62fb488dfbf040d700b3e&amp;type=3#Levels" reorder-mode="Animated" reorderable="true" class="list" style="background-color: rgb(70, 70, 70); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;" />
+        </ui:Tab>
+    </ui:TabView>
+</ui:UXML>

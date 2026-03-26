@@ -6,14 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/00_Home.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/Scenes/Main
+      Menu.unity
+    guid: 28e943d965b7f664dab7c826a410cf3e
   - enabled: 1
-    path: Assets/Scenes/01_Intro.unity
-    guid: b3d10dbc7fcae234e813982db7f72038
-  - enabled: 1
-    path: Assets/Morgue Room PBR/morgue scene/morgue.unity
-    guid: 845128cf95f90184697fffb609346de8
+    path: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/Scenes/Levels.unity
+    guid: c54d9b8edbba5c045b37c774029a68c0
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
