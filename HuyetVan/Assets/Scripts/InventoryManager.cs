@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI; // Thư viện dùng cho UI cũ
-// Nếu bạn dùng TextMeshPro cho UI, hãy thêm: using TMPro;
+using UnityEngine.InputSystem; // BẮT BUỘC THÊM: Thư viện cho hệ thống Input mới
 
 public class InventoryManager : MonoBehaviour
 {
@@ -32,8 +32,11 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        // Bấm phím 1 để lấy/cất dao
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        // Kiểm tra xem bàn phím có đang hoạt động không để tránh lỗi vặt
+        if (Keyboard.current == null) return;
+
+        // Bấm phím 1 để lấy/cất dao (Đã sửa thành chuẩn New Input System)
+        if (Keyboard.current.digit1Key.wasPressedThisFrame)
         {
             ToggleScalpel();
         }
