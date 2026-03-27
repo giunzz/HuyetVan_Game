@@ -15,10 +15,17 @@ namespace CorruptedCircuit.SlidingTilePuzzle.Core.SO
         public List<Level> _Levels;
         public GeneralSettings _GeneralSettings;
         public int _CurrentLevelNumber => PlayerPrefs.GetInt("SelectedLevel", 0);
+        
+        // ---- ĐÃ CHỈNH SỬA Ở ĐÂY ----
+        // Comment hoặc xóa luôn hàm này để cắt đứt liên kết với GlobalSettings
+        /*
         public Setup()
         {
             GlobalSettings._Setups.Add(this);
         }
+        */
+        // ---------------------------
+
         public static Setup operator ++(Setup operand)
         {
             int current = PlayerPrefs.GetInt("SelectedLevel", 0);
@@ -37,6 +44,9 @@ namespace CorruptedCircuit.SlidingTilePuzzle.Core.SO
             }
         }
     }
+    
+    // ... (Các class Level và GeneralSettings bên dưới giữ nguyên y hệt)
+    
     [System.Serializable]
     public class Level
     {

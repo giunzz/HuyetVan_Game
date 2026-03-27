@@ -1,60 +1,57 @@
 using UnityEngine;
-using UnityEngine.Events;
-using CorruptedCircuit.SlidingTilePuzzle.Core;
 
 public class Autopsy2DMiniGame : MonoBehaviour
 {
+   
     public static Autopsy2DMiniGame Instance;
 
     [Header("Tham chiếu")]
     public GameObject puzzleCanvas;
-    public SlidingTilePuzzleManager puzzleManager;
-
-    [Header("Events")]
-    public UnityEvent onSolved;
-    public UnityEvent onFailed;
-
-    private bool _listening = false;
+    public GameObject puzzleManager;
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        // Khởi tạo đường dây nóng ngay khi vào game
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
+    // 2. HÀM MỞ MINI GAME
     public void OpenMiniGame()
     {
-        if (puzzleCanvas == null || puzzleManager == null)
+        Debug.Log("Đã gọi hàm OpenMiniGame thành công!"); // In ra để kiểm tra
+
+        if (puzzleCanvas != null)
         {
-            Debug.LogError("Chưa gán puzzleCanvas hoặc puzzleManager!");
-            return;
+            // Bật cái Canvas xám xịt đó lên!
+            puzzleCanvas.SetActive(true);
+
+            // Mở khóa chuột và hiện chuột lên để người chơi xếp hình
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
-        puzzleCanvas.SetActive(true);
-        if (!_listening)
+        else
         {
-            puzzleManager.OnSolved.AddListener(OnPuzzleSolved);
-            _listening = true;
+            Debug.LogError("⚠️ Chưa gán Puzzle Canvas trong Inspector kìa!");
         }
     }
 
-    void OnPuzzleSolved()
+    // (Hàm này dùng để tắt game sau khi xếp hình xong)
+    public void CloseMiniGame()
     {
-        CloseMiniGame();
-        if (LoreManager.Instance != null)
-            LoreManager.Instance.UnlockEntry("corpse_01");
-        onSolved?.Invoke();
-    }
-
-    public void OnPuzzleFailed()
-    {
-        CloseMiniGame();
-        onFailed?.Invoke();
-    }
-
-    void CloseMiniGame()
-    {
-        puzzleCanvas.SetActive(false);
-        puzzleManager.OnSolved.RemoveListener(OnPuzzleSolved);
-        _listening = false;
+        if (puzzleCanvas != null)
+        {
+            puzzleCanvas.SetActive(false); // Tắt Canvas đi
+            
+            // Khóa chuột lại để chơi góc nhìn thứ nhất (FPS)
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

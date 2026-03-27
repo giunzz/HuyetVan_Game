@@ -13,6 +13,14 @@ namespace CorruptedCircuit.SlidingTilePuzzle.Core
         [Header("UI / Fit")]
         public RectTransform puzzleParent;
 
+        // ---- PHẦN CODE THÊM MỚI ĐỂ CHẠY ĐỘC LẬP ----
+        [Header("Mini Game Override")]
+        [Tooltip("Kéo file Setup (dữ liệu các màn chơi) vào đây")]
+        public Setup customSetupData; 
+        [Tooltip("Nhập số 0 để chơi màn đầu tiên, số 1 cho màn thứ hai...")]
+        public int levelIndexToPlay = 0; 
+        // -------------------------------------------
+
         GeneralSettings _gen;
         Level _lvl;
         TileButton[,] _grid;
@@ -26,11 +34,35 @@ namespace CorruptedCircuit.SlidingTilePuzzle.Core
         public UnityEvent<float> OnProgress;
         public UnityEvent OnStart, OnSolved, OnComplete;
         int TotalTiles => Mathf.Max(1, _lvl.gridSize.x * _lvl.gridSize.y - 1);
+
         void Start()
         {
-            _gen = GlobalSettings._SetUp._GeneralSettings;
-            _lvl = GlobalSettings._CurrentLevel;
-            GlobalSettings.DisplayLevelDetails(GetComponent<UnityEngine.UIElements.UIDocument>().rootVisualElement);
+            // ---- SỬA LẠI LOGIC LẤY DỮ LIỆU ----
+            if (customSetupData != null)
+            {
+                // 1. Chế độ Mini Game Độc lập (Bạn kéo Data trực tiếp)
+                _gen = customSetupData._GeneralSettings;
+                if (levelIndexToPlay >= 0 && levelIndexToPlay < customSetupData._Levels.Count)
+                {
+                    _lvl = customSetupData._Levels[levelIndexToPlay];
+                }
+                else
+                {
+                    Debug.LogError("SlidingTilePuzzleManager: Level Index không hợp lệ (Vượt quá số lượng màn chơi)!");
+                    return;
+                }
+            }
+            else
+            {
+                // 2. Chế độ Gốc của Template (Dành cho trường hợp chạy từ Main Menu)
+                _gen = GlobalSettings._SetUp._GeneralSettings;
+                _lvl = GlobalSettings._CurrentLevel;
+                
+                // Comment lại dòng này vì chúng ta không dùng giao diện UI Document mặc định
+                // GlobalSettings.DisplayLevelDetails(GetComponent<UnityEngine.UIElements.UIDocument>().rootVisualElement);
+            }
+            // -----------------------------------
+
             if (_lvl == null)
             {
                 Debug.LogError("SlidingTilePuzzleManager: Setup is not assigned.");
@@ -42,10 +74,17 @@ namespace CorruptedCircuit.SlidingTilePuzzle.Core
                 return;
             }
        
-            puzzleParent.SetAnchorCenterKeepSize();
+            // ---- ĐÃ SỬA TẠI ĐÂY ----
+            // Tắt dòng tính toán tự động này đi vì nó làm văng Panel ra ngoài màn hình
+            // puzzleParent.SetAnchorCenterKeepSize(); 
+            // -------------------------
+
             FitParent();
             StartCoroutine(StartupRoutine());
-            OnSolved.AddListener(GlobalSettings.OnSolved);
+
+            // Comment lại dòng này để tránh lỗi liên quan đến GlobalSettings khi Win game
+            // OnSolved.AddListener(GlobalSettings.OnSolved); 
+            
             Progress += i => OnProgress?.Invoke(i);
         }
 
