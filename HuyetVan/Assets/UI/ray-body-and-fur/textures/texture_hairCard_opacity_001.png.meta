@@ -1,0 +1,1222 @@
+fileFormatVersion: 2
+guid: de7a4099560002e4a9b9249df6864ce7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -834330671756288312
+    second: texture_hairCard_opacity_001_0
+  - first:
+      213: -9152663965004715038
+    second: texture_hairCard_opacity_001_1
+  - first:
+      213: 5875502677399119086
+    second: texture_hairCard_opacity_001_2
+  - first:
+      213: 881955863516985950
+    second: texture_hairCard_opacity_001_3
+  - first:
+      213: 4226886265360849888
+    second: texture_hairCard_opacity_001_4
+  - first:
+      213: 4343470803828296712
+    second: texture_hairCard_opacity_001_5
+  - first:
+      213: -4641291719801430923
+    second: texture_hairCard_opacity_001_6
+  - first:
+      213: 2221630246773059374
+    second: texture_hairCard_opacity_001_7
+  - first:
+      213: -5306839201861287058
+    second: texture_hairCard_opacity_001_8
+  - first:
+      213: -6801603184772856307
+    second: texture_hairCard_opacity_001_9
+  - first:
+      213: 1798107325304028066
+    second: texture_hairCard_opacity_001_10
+  - first:
+      213: -91670979147009273
+    second: texture_hairCard_opacity_001_11
+  - first:
+      213: 5390187297402349282
+    second: texture_hairCard_opacity_001_12
+  - first:
+      213: 6849703003477933957
+    second: texture_hairCard_opacity_001_13
+  - first:
+      213: 8859109588381042648
+    second: texture_hairCard_opacity_001_14
+  - first:
+      213: 4635829169442438155
+    second: texture_hairCard_opacity_001_15
+  - first:
+      213: 735050321257521034
+    second: texture_hairCard_opacity_001_16
+  - first:
+      213: 5336060158172289757
+    second: texture_hairCard_opacity_001_17
+  - first:
+      213: 5634310814584415058
+    second: texture_hairCard_opacity_001_18
+  - first:
+      213: -4622239153491419733
+    second: texture_hairCard_opacity_001_19
+  - first:
+      213: -8068167453595041102
+    second: texture_hairCard_opacity_001_20
+  - first:
+      213: 7426501399139639482
+    second: texture_hairCard_opacity_001_21
+  - first:
+      213: -5995854651507617383
+    second: texture_hairCard_opacity_001_22
+  - first:
+      213: -3775754144623808848
+    second: texture_hairCard_opacity_001_23
+  - first:
+      213: -1398584415558495366
+    second: texture_hairCard_opacity_001_24
+  - first:
+      213: -4634869785506106004
+    second: texture_hairCard_opacity_001_25
+  - first:
+      213: -7024264088016691567
+    second: texture_hairCard_opacity_001_26
+  - first:
+      213: -3084427494890547998
+    second: texture_hairCard_opacity_001_27
+  - first:
+      213: -8985053195696186252
+    second: texture_hairCard_opacity_001_28
+  - first:
+      213: 6382523019588633788
+    second: texture_hairCard_opacity_001_29
+  - first:
+      213: -5278480381910301743
+    second: texture_hairCard_opacity_001_30
+  - first:
+      213: -2442891729045754935
+    second: texture_hairCard_opacity_001_31
+  - first:
+      213: 1863516645398983353
+    second: texture_hairCard_opacity_001_32
+  - first:
+      213: -2923032813974078589
+    second: texture_hairCard_opacity_001_33
+  - first:
+      213: -7498066197511146466
+    second: texture_hairCard_opacity_001_34
+  - first:
+      213: 234977174947375251
+    second: texture_hairCard_opacity_001_35
+  - first:
+      213: -624199829338848292
+    second: texture_hairCard_opacity_001_36
+  - first:
+      213: 1321630344803631626
+    second: texture_hairCard_opacity_001_37
+  - first:
+      213: -7167747085463441604
+    second: texture_hairCard_opacity_001_38
+  - first:
+      213: -5847073862967840287
+    second: texture_hairCard_opacity_001_39
+  - first:
+      213: -1098608174072536554
+    second: texture_hairCard_opacity_001_40
+  - first:
+      213: -8722355109614034739
+    second: texture_hairCard_opacity_001_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 4131
+        width: 847
+        height: 4016
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ced0ccacacdb64f0800000000000000
+      internalID: -834330671756288312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_1
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 4413
+        width: 421
+        height: 3734
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb2061ed943bf080800000000000000
+      internalID: -9152663965004715038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_2
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 4233
+        width: 785
+        height: 3917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee42b3b2e8af98150800000000000000
+      internalID: 5875502677399119086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_3
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 4252
+        width: 572
+        height: 3896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ab0806f265d3c00800000000000000
+      internalID: 881955863516985950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_4
+      rect:
+        serializedVersion: 2
+        x: 3357
+        y: 4226
+        width: 543
+        height: 3921
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb9fc0d9aae8aa30800000000000000
+      internalID: 4226886265360849888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_5
+      rect:
+        serializedVersion: 2
+        x: 4144
+        y: 4236
+        width: 659
+        height: 3912
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c4772feab174c30800000000000000
+      internalID: 4343470803828296712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_6
+      rect:
+        serializedVersion: 2
+        x: 4915
+        y: 4510
+        width: 525
+        height: 3637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c164e75c1d69fb0800000000000000
+      internalID: -4641291719801430923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_7
+      rect:
+        serializedVersion: 2
+        x: 5419
+        y: 4709
+        width: 98
+        height: 3437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2feb2150f0d4de10800000000000000
+      internalID: 2221630246773059374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_8
+      rect:
+        serializedVersion: 2
+        x: 5636
+        y: 4226
+        width: 385
+        height: 3919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63c0fcdcd15a56b0800000000000000
+      internalID: -5306839201861287058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_9
+      rect:
+        serializedVersion: 2
+        x: 6060
+        y: 4126
+        width: 87
+        height: 4022
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06c27c90f9db91a0800000000000000
+      internalID: -6801603184772856307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_10
+      rect:
+        serializedVersion: 2
+        x: 6378
+        y: 6364
+        width: 614
+        height: 1785
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab36c8e51924f810800000000000000
+      internalID: 1798107325304028066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_11
+      rect:
+        serializedVersion: 2
+        x: 7148
+        y: 4156
+        width: 1044
+        height: 3991
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703fabbeab15abef0800000000000000
+      internalID: -91670979147009273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_12
+      rect:
+        serializedVersion: 2
+        x: 6306
+        y: 4326
+        width: 263
+        height: 1754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e66d7ed9cacdca40800000000000000
+      internalID: 5390187297402349282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_13
+      rect:
+        serializedVersion: 2
+        x: 6722
+        y: 4288
+        width: 343
+        height: 1764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f7a3327980f0f50800000000000000
+      internalID: 6849703003477933957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 111
+        width: 747
+        height: 3923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d785b9ab31e1fa70800000000000000
+      internalID: 8859109588381042648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_15
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 61
+        width: 411
+        height: 3974
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0cb2046116c55040800000000000000
+      internalID: 4635829169442438155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_16
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 378
+        width: 209
+        height: 3645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f579a6f5c633a00800000000000000
+      internalID: 735050321257521034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_17
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 115
+        width: 472
+        height: 3919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda59f3317e7d0a40800000000000000
+      internalID: 5336060158172289757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_18
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 103
+        width: 411
+        height: 3930
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253227185d7113e40800000000000000
+      internalID: 5634310814584415058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_19
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 133
+        width: 159
+        height: 3875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baddd35caf18adfb0800000000000000
+      internalID: -4622239153491419733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_20
+      rect:
+        serializedVersion: 2
+        x: 3154
+        y: 339
+        width: 98
+        height: 3681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2891ca27c180090800000000000000
+      internalID: -8068167453595041102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_21
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 555
+        width: 225
+        height: 3466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0e8abdcab301760800000000000000
+      internalID: 7426501399139639482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_22
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 1194
+        width: 104
+        height: 2808
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991d30c36f17acca0800000000000000
+      internalID: -5995854651507617383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_23
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 137
+        width: 259
+        height: 3897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be2d7a3c93d99bc0800000000000000
+      internalID: -3775754144623808848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_24
+      rect:
+        serializedVersion: 2
+        x: 4128
+        y: 185
+        width: 917
+        height: 3849
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a731d3252ea379ce0800000000000000
+      internalID: -1398584415558495366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_25
+      rect:
+        serializedVersion: 2
+        x: 5179
+        y: 169
+        width: 359
+        height: 3856
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65b7b69c72adafb0800000000000000
+      internalID: -4634869785506106004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_26
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 62
+        width: 443
+        height: 3938
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e5b31370dc48e90800000000000000
+      internalID: -7024264088016691567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_27
+      rect:
+        serializedVersion: 2
+        x: 6121
+        y: 2123
+        width: 632
+        height: 1919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4d99f0989e135d0800000000000000
+      internalID: -3084427494890547998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_28
+      rect:
+        serializedVersion: 2
+        x: 6896
+        y: 2117
+        width: 392
+        height: 1919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c5a8e29bdae4380800000000000000
+      internalID: -8985053195696186252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_29
+      rect:
+        serializedVersion: 2
+        x: 7279
+        y: 2232
+        width: 210
+        height: 1802
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb48559ced6439850800000000000000
+      internalID: 6382523019588633788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_30
+      rect:
+        serializedVersion: 2
+        x: 7579
+        y: 2155
+        width: 216
+        height: 1881
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d34e5a2f021fb6b0800000000000000
+      internalID: -5278480381910301743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_31
+      rect:
+        serializedVersion: 2
+        x: 7790
+        y: 2102
+        width: 119
+        height: 1923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbec795aea191ed0800000000000000
+      internalID: -2442891729045754935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_32
+      rect:
+        serializedVersion: 2
+        x: 7905
+        y: 2086
+        width: 94
+        height: 1944
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2b802048a8cd910800000000000000
+      internalID: 1863516645398983353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_33
+      rect:
+        serializedVersion: 2
+        x: 8047
+        y: 2217
+        width: 93
+        height: 1805
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38bb340842d4f67d0800000000000000
+      internalID: -2923032813974078589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_34
+      rect:
+        serializedVersion: 2
+        x: 6215
+        y: 214
+        width: 61
+        height: 1698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14fbf2158481f790800000000000000
+      internalID: -7498066197511146466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_35
+      rect:
+        serializedVersion: 2
+        x: 6267
+        y: 421
+        width: 70
+        height: 1526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3982013ee7ec24300800000000000000
+      internalID: 234977174947375251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_36
+      rect:
+        serializedVersion: 2
+        x: 6360
+        y: 523
+        width: 131
+        height: 1385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd30667ff856657f0800000000000000
+      internalID: -624199829338848292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_37
+      rect:
+        serializedVersion: 2
+        x: 6587
+        y: 228
+        width: 345
+        height: 1740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02c56adbcf575210800000000000000
+      internalID: 1321630344803631626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_38
+      rect:
+        serializedVersion: 2
+        x: 6749
+        y: 163
+        width: 383
+        height: 1810
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f2c1b800c078c90800000000000000
+      internalID: -7167747085463441604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_39
+      rect:
+        serializedVersion: 2
+        x: 7251
+        y: 225
+        width: 144
+        height: 1705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1b45efc450bdea0800000000000000
+      internalID: -5847073862967840287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_40
+      rect:
+        serializedVersion: 2
+        x: 7283
+        y: 180
+        width: 416
+        height: 1793
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612e015bfa5f0c0f0800000000000000
+      internalID: -1098608174072536554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: texture_hairCard_opacity_001_41
+      rect:
+        serializedVersion: 2
+        x: 7765
+        y: 221
+        width: 384
+        height: 1752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc064a6ad38f3f680800000000000000
+      internalID: -8722355109614034739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      texture_hairCard_opacity_001_0: -834330671756288312
+      texture_hairCard_opacity_001_1: -9152663965004715038
+      texture_hairCard_opacity_001_10: 1798107325304028066
+      texture_hairCard_opacity_001_11: -91670979147009273
+      texture_hairCard_opacity_001_12: 5390187297402349282
+      texture_hairCard_opacity_001_13: 6849703003477933957
+      texture_hairCard_opacity_001_14: 8859109588381042648
+      texture_hairCard_opacity_001_15: 4635829169442438155
+      texture_hairCard_opacity_001_16: 735050321257521034
+      texture_hairCard_opacity_001_17: 5336060158172289757
+      texture_hairCard_opacity_001_18: 5634310814584415058
+      texture_hairCard_opacity_001_19: -4622239153491419733
+      texture_hairCard_opacity_001_2: 5875502677399119086
+      texture_hairCard_opacity_001_20: -8068167453595041102
+      texture_hairCard_opacity_001_21: 7426501399139639482
+      texture_hairCard_opacity_001_22: -5995854651507617383
+      texture_hairCard_opacity_001_23: -3775754144623808848
+      texture_hairCard_opacity_001_24: -1398584415558495366
+      texture_hairCard_opacity_001_25: -4634869785506106004
+      texture_hairCard_opacity_001_26: -7024264088016691567
+      texture_hairCard_opacity_001_27: -3084427494890547998
+      texture_hairCard_opacity_001_28: -8985053195696186252
+      texture_hairCard_opacity_001_29: 6382523019588633788
+      texture_hairCard_opacity_001_3: 881955863516985950
+      texture_hairCard_opacity_001_30: -5278480381910301743
+      texture_hairCard_opacity_001_31: -2442891729045754935
+      texture_hairCard_opacity_001_32: 1863516645398983353
+      texture_hairCard_opacity_001_33: -2923032813974078589
+      texture_hairCard_opacity_001_34: -7498066197511146466
+      texture_hairCard_opacity_001_35: 234977174947375251
+      texture_hairCard_opacity_001_36: -624199829338848292
+      texture_hairCard_opacity_001_37: 1321630344803631626
+      texture_hairCard_opacity_001_38: -7167747085463441604
+      texture_hairCard_opacity_001_39: -5847073862967840287
+      texture_hairCard_opacity_001_4: 4226886265360849888
+      texture_hairCard_opacity_001_40: -1098608174072536554
+      texture_hairCard_opacity_001_41: -8722355109614034739
+      texture_hairCard_opacity_001_5: 4343470803828296712
+      texture_hairCard_opacity_001_6: -4641291719801430923
+      texture_hairCard_opacity_001_7: 2221630246773059374
+      texture_hairCard_opacity_001_8: -5306839201861287058
+      texture_hairCard_opacity_001_9: -6801603184772856307
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

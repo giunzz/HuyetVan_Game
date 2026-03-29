@@ -1,22 +1,38 @@
 using UnityEngine;
 using System.Collections;
-using TMPro; // THÊM DÒNG NÀY ĐỂ GAME HIỂU ĐƯỢC TEXT MESH PRO
+using TMPro;
 
 public class Autopsy2DMiniGame : MonoBehaviour
 {
     public static Autopsy2DMiniGame Instance;
 
-    [Header("Tham chiếu Giao diện")]
+    [Header("UI")]
     public GameObject puzzleCanvas;
+    public GameObject successPanel;
+    public TextMeshProUGUI successText;
+    public TextMeshProUGUI timerText;
+
+    [Header("Anchor")]
+    public Transform bodyAnchor;
+
+    [Header("Puzzle")]
     public GameObject puzzleManager;
-    
-    [Header("Giao diện Chiến thắng")]
-    public GameObject successPanel; 
-    public TextMeshProUGUI successText; // Nơi chứa dòng chữ
-    
+
+    [Header("Swap Body")]
+    public GameObject morgueFinal;   // xác cũ
+    public GameObject newBodyModel;  // ✅ FIX: thêm biến này
+
+    [Header("Text")]
     [TextArea]
-    public string message = "Tuyệt vời! Bạn đã tìm ra mảnh ghép quan trọng của thi thể..."; // Nội dung bạn muốn chạy
-    public float typingSpeed = 0.05f; // Tốc độ gõ (số càng nhỏ chạy càng nhanh)
+    public string message = "Tuyệt vời! Bạn đã tìm ra nguyên nhân...";
+    public float typingSpeed = 0.05f;
+
+    [Header("Time")]
+    public float timeLimit = 300f;
+
+    private float currentTime;
+    private bool isPlaying = false;
+    private bool isSolved = false;
 
     void Awake()
     {
@@ -24,55 +40,132 @@ public class Autopsy2DMiniGame : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    void Update()
+    {
+        if (!isPlaying) return;
+
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0)
+        {
+            currentTime = 0;
+            UpdateTimer();
+
+            if (!isSolved)
+            {
+                Debug.Log("⏰ Hết giờ!");
+                ResetPuzzle();
+            }
+
+            isPlaying = false;
+            return;
+        }
+
+        UpdateTimer();
+    }
+
+    void UpdateTimer()
+    {
+        if (timerText == null) return;
+
+        int min = Mathf.FloorToInt(currentTime / 60);
+        int sec = Mathf.FloorToInt(currentTime % 60);
+
+        timerText.text = $"{min:00}:{sec:00}";
+    }
+
     public void OpenMiniGame()
     {
-        if (puzzleCanvas != null)
-        {
-            puzzleCanvas.SetActive(true);
-            
-            // Đảm bảo bảng chiến thắng bị tắt khi mới bắt đầu chơi lại
-            if (successPanel != null) successPanel.SetActive(false); 
-            
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        Debug.Log("OPEN MINIGAME");
+
+        puzzleCanvas.SetActive(true);
+
+        if (successPanel != null)
+            successPanel.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        isPlaying = true;
+        isSolved = false;
+
+        currentTime = timeLimit;
+        UpdateTimer();
     }
 
     public void OnPuzzleSolved()
     {
-        Debug.Log("Đã xếp xong! Bật bảng thông báo và chạy chữ...");
+        Debug.Log("✅ Đã xếp xong!");
+
+        isSolved = true;
+        isPlaying = false;
+
+        StartCoroutine(SwapBody());
+
         if (successPanel != null)
         {
-            successPanel.SetActive(true); // Bật cái bảng lên
-            
-            // Kích hoạt hiệu ứng gõ chữ nếu đã gán Text
+            successPanel.SetActive(true);
+
             if (successText != null)
-            {
-                StartCoroutine(TypeWriterEffect());
-            }
+                StartCoroutine(TypeWriter());
         }
     }
 
-    // HIỆU ỨNG GÕ TỪNG CHỮ MỘT
-    IEnumerator TypeWriterEffect()
+    IEnumerator SwapBody()
     {
-        successText.text = ""; // Xóa trắng chữ cũ ban đầu
+        yield return new WaitForSeconds(1f);
+
+        if (newBodyModel == null)
+        {
+            Debug.LogError("❌ Missing newBodyModel");
+            yield break;
+        }
+
+        newBodyModel.SetActive(true);
+
+        if (morgueFinal != null)
+            morgueFinal.SetActive(false);
+    }
+
+    IEnumerator TypeWriter()
+    {
+        successText.text = "";
+
         foreach (char c in message)
         {
-            successText.text += c; // Nhả từng chữ cái ra màn hình
-            yield return new WaitForSeconds(typingSpeed); // Nghỉ một chút theo tốc độ đã cài rồi mới nhả chữ tiếp
+            successText.text += c;
+            yield return new WaitForSeconds(typingSpeed);
         }
+    }
+
+    void ResetPuzzle()
+    {
+        Debug.Log("RESET PUZZLE");
+
+        isPlaying = false;
+
+        if (puzzleManager != null)
+        {
+            puzzleManager.SetActive(false);
+            puzzleManager.SetActive(true);
+        }
+
+        if (successPanel != null)
+            successPanel.SetActive(false);
+
+        CloseMiniGame();
     }
 
     public void CloseMiniGame()
     {
-        if (puzzleCanvas != null)
-        {
-            puzzleCanvas.SetActive(false);
-            if (successPanel != null) successPanel.SetActive(false);
-            
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        puzzleCanvas.SetActive(false);
+
+        if (successPanel != null)
+            successPanel.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        isPlaying = false;
     }
 }

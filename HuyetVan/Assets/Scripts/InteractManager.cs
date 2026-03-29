@@ -11,7 +11,7 @@ public class InteractManager : MonoBehaviour
 
     private GameObject _heldObject;
     private Rigidbody _heldRb;
-
+    public static bool HasSample = false;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -48,7 +48,10 @@ public class InteractManager : MonoBehaviour
                     case "Door":     break;
                     case "Corpse":   HandleCorpse(); break;
                     case "ExitDoor": HandleExitDoor(); break;
-                    case "Scalpel":  HandleScalpelPickup(hit.collider.gameObject); break; // GỌI HÀM NHẶT DAO MỚI
+                    case "Scalpel":  HandleScalpelPickup(hit.collider.gameObject); break; 
+                    case "QTip": PickupObject(hit.collider.gameObject); break;
+                    case "NewCorpse": HandleQTipUse(hit.collider.gameObject); break;
+                    case "Microscope": HandleMicroscope(hit.collider.gameObject); break;
                     default: Debug.Log("Không có tương tác: " + tag); break;
                 }
             }
@@ -62,7 +65,22 @@ public class InteractManager : MonoBehaviour
         if (_heldObject != null)
             MoveHeldObject();
     }
+        void HandleMicroscope(GameObject micro)
+    {
+        if (!HasSample)
+        {
+            Debug.Log("❌ Cần lấy mẫu trước!");
+            return;
+        }
 
+        Debug.Log("🔬 Bắt đầu xét nghiệm");
+
+        Microscope microscope = micro.GetComponent<Microscope>();
+        if (microscope != null)
+        {
+            microscope.Interact();
+        }
+    }
     // ── PICKUP ──────────────────────────────────────────
     void PickupObject(GameObject obj)
     {
@@ -95,7 +113,42 @@ public class InteractManager : MonoBehaviour
             Time.deltaTime * 15f
         );
     }
+    void HandleQTipUse(GameObject corpse)
+    {
+        if (_heldObject == null || _heldObject.tag != "QTip")
+        {
+            Debug.Log("Cần cầm Q-tip!");
+            return;
+        }
 
+        Debug.Log("🧪 Lấy mẫu!");
+
+        Vector3 attachPos = corpse.transform.position + Vector3.up * 1f;
+
+        _heldObject.transform.SetParent(corpse.transform);
+        _heldObject.transform.position = attachPos;
+        _heldObject.transform.rotation = Quaternion.identity;
+
+        if (_heldRb != null)
+        {
+            _heldRb.isKinematic = true;
+            _heldRb.useGravity = false;
+        }
+
+        _heldObject = null;
+        _heldRb = null;
+
+        // ✅ QUAN TRỌNG
+        HasSample = true;
+
+        Debug.Log("✅ Đã lấy mẫu!");
+
+        // 👉 bật microscope
+        if (Microscope.Instance != null)
+        {
+            Microscope.Instance.EnableMicroscope();
+        }
+    }
     void DropObject()
     {
         if (_heldObject == null) return;
@@ -184,7 +237,7 @@ public class InteractManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Cần gọi UI: Chưa xong việc, mình không thể rời đi...");
+            Debug.Log("Chưa xong việc, mình không thể rời đi...");
         }
     }
 }

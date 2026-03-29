@@ -21,12 +21,12 @@ MonoBehaviour:
     - {fileID: 2800000, guid: dd469fea00a60a94eb28f4051971abf7, type: 3}
     - {fileID: 2800000, guid: 141b3ee07140116449e2a6b21fba3de1, type: 3}
     Difficulty: 0
-    gridSize: {x: 2, y: 3}
+    gridSize: {x: 2, y: 2}
   - sourceTextures:
     - {fileID: 2800000, guid: 8832d108d4507014096a3a36a5bc360d, type: 3}
     - {fileID: 2800000, guid: d18c5c64d4a19724aa7676021a6743a1, type: 3}
     Difficulty: 0
-    gridSize: {x: 3, y: 5}
+    gridSize: {x: 3, y: 4}
   - sourceTextures:
     - {fileID: 2800000, guid: c89b3d7668f5d6b4b9833b2c31f1ee74, type: 3}
     - {fileID: 2800000, guid: c32d41a118cf5244d9f10064d724b721, type: 3}

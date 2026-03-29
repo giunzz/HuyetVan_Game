@@ -9,6 +9,9 @@ TagManager:
   - Pickable
   - Scalpel
   - 'Corpse '
+  - QTip
+  - NewCorpse
+  - Microscope
   layers:
   - Default
   - TransparentFX
