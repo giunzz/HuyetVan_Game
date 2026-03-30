@@ -21,19 +21,18 @@ public class Microscope : MonoBehaviour
 
     public void Interact()
     {
-        if (!canUse)
+        if (InventoryManager.Instance == null ||
+            !InventoryManager.Instance.HasQTipSample())
         {
-            Debug.Log("❌ Chưa unlock microscope");
+            Debug.Log("❌ QTip chưa có mẫu!");
             return;
         }
 
+        Debug.Log("🔬 Đang xét nghiệm mẫu...");
+
+        // bật UI
         if (microscopeUI != null)
             microscopeUI.SetActive(true);
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
-        StartCoroutine(Analyze());
     }
 
     IEnumerator Analyze()

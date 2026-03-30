@@ -1,21 +1,28 @@
 using UnityEngine;
-using UnityEngine.UI; // Thư viện dùng cho UI cũ
-using UnityEngine.InputSystem; // BẮT BUỘC THÊM: Thư viện cho hệ thống Input mới
+using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
-    // Singleton giúp gọi túi đồ từ mọi nơi
     public static InventoryManager Instance;
 
-    [Header("UI Túi Đồ")]
-    public GameObject scalpelIconUI; // Hình ảnh con dao trong ô Slot1
+    [Header("UI")]
+    public GameObject scalpelIconUI;
+    public GameObject qtipIconUI;
 
-    [Header("Vật dụng trên tay (Viewmodel)")]
-    public GameObject scalpelInHand; // Con dao gắn ở Camera bạn làm ở Bước 2
+    [Header("Viewmodel (cầm trên tay)")]
+    public GameObject scalpelInHand;
+    public GameObject qtipInHand;
 
-    // Trạng thái túi đồ
-    private bool _hasScalpelInBag = false;
+    // ===== STATE =====
+    private bool _hasScalpel = false;
+    private bool _hasQTip = false;
+    private bool _qtipHasSample = false;
+
     private bool _isScalpelEquipped = false;
+    private bool _isQTipEquipped = false;
+
+    // cache renderer để tránh gọi nhiều lần
+    private Renderer _qtipRenderer;
 
     void Awake()
     {
@@ -25,62 +32,146 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        // Mới vào game: chưa có dao trong túi, chưa cầm trên tay
+        // Tắt UI ban đầu
         if (scalpelIconUI != null) scalpelIconUI.SetActive(false);
+        if (qtipIconUI != null) qtipIconUI.SetActive(false);
+
+        // Tắt item trên tay
         if (scalpelInHand != null) scalpelInHand.SetActive(false);
+        if (qtipInHand != null) qtipInHand.SetActive(false);
+
+        // cache renderer QTip
+        if (qtipInHand != null)
+        {
+            _qtipRenderer = qtipInHand.GetComponentInChildren<Renderer>();
+        }
     }
 
     void Update()
     {
-        // Kiểm tra xem bàn phím có đang hoạt động không để tránh lỗi vặt
         if (Keyboard.current == null) return;
 
-        // Bấm phím 1 để lấy/cất dao (Đã sửa thành chuẩn New Input System)
         if (Keyboard.current.digit1Key.wasPressedThisFrame)
         {
-            ToggleScalpel();
+            EquipScalpel();
+        }
+
+        if (Keyboard.current.digit2Key.wasPressedThisFrame)
+        {
+            EquipQTip();
         }
     }
 
-    // Hàm được gọi từ InteractManager khi nhặt dao mổ
+    // ================= ADD ITEM =================
     public void AddScalpelToBag()
     {
-        if (_hasScalpelInBag) return; // Đã có rồi thì thôi
+        if (_hasScalpel) return;
 
-        _hasScalpelInBag = true;
+        _hasScalpel = true;
 
-        // Hiện icon con dao trong túi đồ UI
-        if (scalpelIconUI != null) scalpelIconUI.SetActive(true);
+        if (scalpelIconUI != null)
+            scalpelIconUI.SetActive(true);
 
-        Debug.Log("Đã bỏ dao mổ vào túi đồ.");
-        
-        // Bạn có thể cho độc thoại nội tâm ở đây:
-        if (MonologueManager.Instance != null)
-            MonologueManager.Instance.Show("Dao mổ đây rồi. Bỏ vào túi thôi.");
+        Debug.Log("✅ Đã nhặt Scalpel");
     }
 
-    // Xử lý logic lấy/cất dao khi bấm phím 1
-    void ToggleScalpel()
+    public void AddQTipToBag()
     {
-        if (!_hasScalpelInBag)
+        if (_hasQTip) return;
+
+        _hasQTip = true;
+
+        if (qtipIconUI != null)
+            qtipIconUI.SetActive(true);
+
+        Debug.Log("✅ Đã nhặt QTip");
+    }
+
+    // ================= SAMPLE =================
+    public void SetQTipHasSample()
+    {
+        _qtipHasSample = true;
+
+        if (_qtipRenderer != null)
         {
-            Debug.Log("Trong túi không có dao mổ.");
+            // hỗ trợ cả URP & Standard shader
+            if (_qtipRenderer.material.HasProperty("_BaseColor"))
+                _qtipRenderer.material.SetColor("_BaseColor", Color.black);
+            else
+                _qtipRenderer.material.color = Color.black;
+        }
+
+        Debug.Log("🧪 QTip đã có mẫu (đen)");
+    }
+
+    public bool HasQTipSample()
+    {
+        return _qtipHasSample;
+    }
+
+    // ================= EQUIP =================
+    void EquipScalpel()
+    {
+        if (!_hasScalpel)
+        {
+            Debug.Log("❌ Không có Scalpel");
             return;
         }
 
-        // Đổi trạng thái cầm/cất
-        _isScalpelEquipped = !_isScalpelEquipped;
+        ResetHand();
 
-        // Hiện/Ẩn mô hình dao trên tay nhân vật
+        _isScalpelEquipped = true;
+
         if (scalpelInHand != null)
+            scalpelInHand.SetActive(true);
+
+        Debug.Log("✋ Cầm Scalpel");
+    }
+
+    void EquipQTip()
+    {
+        if (!_hasQTip)
         {
-            scalpelInHand.SetActive(_isScalpelEquipped);
-            Debug.Log(_isScalpelEquipped ? "✋ Đã cầm dao mổ trên tay." : "🎒 Đã cất dao mổ vào túi.");
+            Debug.Log("❌ Không có QTip");
+            return;
+        }
+
+        ResetHand();
+
+        _isQTipEquipped = true;
+
+        if (qtipInHand != null)
+            qtipInHand.SetActive(true);
+
+        Debug.Log("✋ Cầm QTip");
+
+        // nếu QTip đã có sample → đảm bảo vẫn màu đen khi equip lại
+        if (_qtipHasSample)
+        {
+            SetQTipHasSample();
         }
     }
 
+    void ResetHand()
+    {
+        _isScalpelEquipped = false;
+        _isQTipEquipped = false;
+
+        if (scalpelInHand != null)
+            scalpelInHand.SetActive(false);
+
+        if (qtipInHand != null)
+            qtipInHand.SetActive(false);
+    }
+
+    // ================= CHECK =================
     public bool IsScalpelEquipped()
     {
         return _isScalpelEquipped;
+    }
+
+    public bool IsQTipEquipped()
+    {
+        return _isQTipEquipped;
     }
 }

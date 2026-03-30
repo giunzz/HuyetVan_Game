@@ -6,12 +6,11 @@ public class InteractManager : MonoBehaviour
     public float interactRange = 3f;
     public Transform holdPoint;
 
-    [Header("State")]
-    public static bool HasScalpel = false;
-
     private GameObject _heldObject;
     private Rigidbody _heldRb;
+
     public static bool HasSample = false;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -22,15 +21,13 @@ public class InteractManager : MonoBehaviour
                 return;
             }
 
-            // 1. Lấy Camera chính làm điểm xuất phát của tia Raycast (Thay vì tâm nhân vật)
             Camera mainCam = Camera.main;
             if (mainCam == null)
             {
-                Debug.LogWarning("Không tìm thấy Main Camera trong scene!");
+                Debug.LogWarning("Không tìm thấy Main Camera!");
                 return;
             }
 
-            // Tạo tia bắn từ vị trí Camera hướng thẳng về phía trước
             Ray ray = new Ray(mainCam.transform.position, mainCam.transform.forward);
             RaycastHit hit;
 
@@ -40,48 +37,27 @@ public class InteractManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, interactRange, interactableLayer))
             {
                 string tag = hit.collider.tag.Trim();
-                Debug.Log("Interact: " + tag + " | Object: " + hit.collider.name);
+                Debug.Log("Interact: " + tag);
 
                 switch (tag)
                 {
                     case "Pickup":   PickupObject(hit.collider.gameObject); break;
-                    case "Door":     break;
+                    case "Scalpel":  HandleScalpelPickup(hit.collider.gameObject); break;
+                    case "QTip":     HandleQTipPickup(hit.collider.gameObject); break;
                     case "Corpse":   HandleCorpse(); break;
-                    case "ExitDoor": HandleExitDoor(); break;
-                    case "Scalpel":  HandleScalpelPickup(hit.collider.gameObject); break; 
-                    case "QTip": PickupObject(hit.collider.gameObject); break;
                     case "NewCorpse": HandleQTipUse(hit.collider.gameObject); break;
                     case "Microscope": HandleMicroscope(hit.collider.gameObject); break;
+                    case "ExitDoor": HandleExitDoor(); break;
                     default: Debug.Log("Không có tương tác: " + tag); break;
                 }
             }
-            else
-            {
-                Debug.Log("Tia Raycast không trúng vật thể nào trong tầm với.");
-            }
         }
 
-        // Di chuyển vật đang cầm trên tay
         if (_heldObject != null)
             MoveHeldObject();
     }
-        void HandleMicroscope(GameObject micro)
-    {
-        if (!HasSample)
-        {
-            Debug.Log("❌ Cần lấy mẫu trước!");
-            return;
-        }
 
-        Debug.Log("🔬 Bắt đầu xét nghiệm");
-
-        Microscope microscope = micro.GetComponent<Microscope>();
-        if (microscope != null)
-        {
-            microscope.Interact();
-        }
-    }
-    // ── PICKUP ──────────────────────────────────────────
+    // ================= PICKUP OBJECT (đồ thường) =================
     void PickupObject(GameObject obj)
     {
         _heldObject = obj;
@@ -90,9 +66,9 @@ public class InteractManager : MonoBehaviour
         if (_heldRb == null)
             _heldRb = _heldObject.AddComponent<Rigidbody>();
 
-        _heldRb.useGravity      = false;
-        _heldRb.isKinematic     = true;
-        _heldRb.linearVelocity  = Vector3.zero;
+        _heldRb.useGravity = false;
+        _heldRb.isKinematic = true;
+        _heldRb.linearVelocity = Vector3.zero;
         _heldRb.angularVelocity = Vector3.zero;
 
         _heldObject.transform.SetParent(holdPoint);
@@ -107,48 +83,14 @@ public class InteractManager : MonoBehaviour
             holdPoint.position,
             Time.deltaTime * 15f
         );
+
         _heldObject.transform.rotation = Quaternion.Lerp(
             _heldObject.transform.rotation,
             holdPoint.rotation,
             Time.deltaTime * 15f
         );
     }
-    void HandleQTipUse(GameObject corpse)
-    {
-        if (_heldObject == null || _heldObject.tag != "QTip")
-        {
-            Debug.Log("Cần cầm Q-tip!");
-            return;
-        }
 
-        Debug.Log("🧪 Lấy mẫu!");
-
-        Vector3 attachPos = corpse.transform.position + Vector3.up * 1f;
-
-        _heldObject.transform.SetParent(corpse.transform);
-        _heldObject.transform.position = attachPos;
-        _heldObject.transform.rotation = Quaternion.identity;
-
-        if (_heldRb != null)
-        {
-            _heldRb.isKinematic = true;
-            _heldRb.useGravity = false;
-        }
-
-        _heldObject = null;
-        _heldRb = null;
-
-        // ✅ QUAN TRỌNG
-        HasSample = true;
-
-        Debug.Log("✅ Đã lấy mẫu!");
-
-        // 👉 bật microscope
-        if (Microscope.Instance != null)
-        {
-            Microscope.Instance.EnableMicroscope();
-        }
-    }
     void DropObject()
     {
         if (_heldObject == null) return;
@@ -157,38 +99,63 @@ public class InteractManager : MonoBehaviour
 
         if (_heldRb != null)
         {
-            _heldRb.useGravity      = true;
-            _heldRb.isKinematic     = false;
-            _heldRb.linearVelocity  = Vector3.zero;
-            _heldRb.angularVelocity = Vector3.zero;
+            _heldRb.useGravity = true;
+            _heldRb.isKinematic = false;
         }
 
         _heldObject = null;
-        _heldRb     = null;
+        _heldRb = null;
     }
 
-    // ── XỬ LÝ NHẶT DAO MỔ BỎ TÚI ĐỒ ──────────────────────
+    // ================= INVENTORY PICKUP =================
     void HandleScalpelPickup(GameObject obj)
     {
         if (InventoryManager.Instance != null)
         {
-            // Báo cho túi đồ cộng dao vào
             InventoryManager.Instance.AddScalpelToBag();
-
-            // Làm con dao ngoài thế giới biến mất (không cần xóa, chỉ cần tắt)
-            obj.SetActive(false); 
-        }
-        else
-        {
-            Debug.LogError("⚠️ Không tìm thấy InventoryManager trong scene! Bạn đã tạo object quản lý nó chưa?");
+            obj.SetActive(false);
         }
     }
 
-    // ── TƯƠNG TÁC ────────────────────────────────────────
+    void HandleQTipPickup(GameObject obj)
+    {
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.AddQTipToBag();
+            obj.SetActive(false);
+        }
+    }
+
+    // ================= USE QTIP =================
+    void HandleQTipUse(GameObject corpse)
+    {
+        bool isHoldingQTip = false;
+
+        if (InventoryManager.Instance != null)
+        {
+            isHoldingQTip = InventoryManager.Instance.IsQTipEquipped();
+        }
+
+        if (!isHoldingQTip)
+        {
+            Debug.Log("Cần cầm QTip!");
+            return;
+        }
+
+        Debug.Log("🧪 Lấy mẫu!");
+
+        Vector3 attachPos = corpse.transform.position + Vector3.up * 1f;
+
+        HasSample = true;
+        if (InventoryManager.Instance != null) InventoryManager.Instance.SetQTipHasSample();
+        Debug.Log("✅ Đã lấy mẫu!");
+    }
+
+    // ================= CORPSE =================
     void HandleCorpse()
     {
-        // KIỂM TRA XEM CÓ ĐANG CẦM DAO TRÊN TAY HAY KHÔNG THÔNG QUA TÚI ĐỒ
         bool isHoldingScalpel = false;
+
         if (InventoryManager.Instance != null)
         {
             isHoldingScalpel = InventoryManager.Instance.IsScalpelEquipped();
@@ -199,45 +166,51 @@ public class InteractManager : MonoBehaviour
             if (MonologueManager.Instance != null)
             {
                 MonologueManager.Instance.Show(
-                    "Mình không thể mổ bằng tay không được.\nDao mổ của mình để đâu rồi?"
+                    "Mình không thể mổ bằng tay không được.\nDao mổ của mình đâu?"
                 );
             }
-            else
-            {
-                Debug.Log("Cần gọi UI: Mình không thể mổ bằng tay không được...");
-            }
+            return;
         }
-        else
+
+        Debug.Log("Bắt đầu mổ xác!");
+
+        if (MonologueManager.Instance != null)
         {
-            Debug.Log("Bắt đầu mổ xác!");
-            if (MonologueManager.Instance != null)
-            {
-                MonologueManager.Instance.Show("Đã sẵn sàng. Bắt đầu phẫu thuật thôi.");
-            }
-            
-            // LIÊN KẾT GỌI MINI GAME 2D Ở ĐÂY
-            if (Autopsy2DMiniGame.Instance != null)
-            {
-                Autopsy2DMiniGame.Instance.OpenMiniGame();
-            }
-            else
-            {
-                Debug.LogWarning("⚠️ Chưa tìm thấy Autopsy2DMiniGame trong scene!");
-            }
+            MonologueManager.Instance.Show("Đã sẵn sàng. Bắt đầu phẫu thuật.");
+        }
+
+        if (Autopsy2DMiniGame.Instance != null)
+        {
+            Autopsy2DMiniGame.Instance.OpenMiniGame();
         }
     }
 
+    // ================= MICROSCOPE =================
+    void HandleMicroscope(GameObject micro)
+    {
+        if (!HasSample)
+        {
+            Debug.Log("❌ Cần lấy mẫu trước!");
+            return;
+        }
+
+        Debug.Log("🔬 Xét nghiệm");
+
+        Microscope microscope = micro.GetComponent<Microscope>();
+        if (microscope != null)
+        {
+            microscope.Interact();
+        }
+    }
+
+    // ================= EXIT =================
     void HandleExitDoor()
     {
         if (MonologueManager.Instance != null)
         {
             MonologueManager.Instance.Show(
-                "Chưa xong việc, mình không thể rời đi.\nNguyên nhân cái chết vẫn còn là ẩn số."
+                "Chưa xong việc, không thể rời đi."
             );
-        }
-        else
-        {
-            Debug.Log("Chưa xong việc, mình không thể rời đi...");
         }
     }
 }
