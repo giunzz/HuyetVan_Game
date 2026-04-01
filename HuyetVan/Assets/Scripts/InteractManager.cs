@@ -45,7 +45,10 @@ public class InteractManager : MonoBehaviour
                     case "Scalpel":  HandleScalpelPickup(hit.collider.gameObject); break;
                     case "QTip":     HandleQTipPickup(hit.collider.gameObject); break;
                     case "Corpse":   HandleCorpse(); break;
-                    case "NewCorpse": HandleQTipUse(hit.collider.gameObject); break;
+                   case "NewCorpse":
+                                    HandleQTipUse(hit.collider.gameObject);
+                                    ShowCorpseRevealDialogue();
+                                    break;
                     case "Microscope": HandleMicroscope(hit.collider.gameObject); break;
                     case "ExitDoor": HandleExitDoor(); break;
                     default: Debug.Log("Không có tương tác: " + tag); break;
@@ -55,6 +58,16 @@ public class InteractManager : MonoBehaviour
 
         if (_heldObject != null)
             MoveHeldObject();
+    }
+        void ShowCorpseRevealDialogue()
+    {
+        if (MonologueManager.Instance != null)
+        {
+            MonologueManager.Instance.Show(
+                "Mai...? Không... Không thể nào! Chuyện quái gì đang xảy ra thế này?!\n" +
+                "Hồ sơ ghi là người vô gia cư cơ mà! Bọn khốn, các người đã làm gì vợ tôi?!"
+            );
+        }
     }
 
     // ================= PICKUP OBJECT (đồ thường) =================

@@ -14,7 +14,7 @@ public class GameIntro : MonoBehaviour
     string[] dialogues = new string[]
     {
         "Ca thứ ba trong tuần. Hồ sơ ghi: Nữ, khoảng 30 tuổi, vô gia cư.\nTử vong do suy tim đột ngột.",
-        "Bắt đầu thôi. Xong sớm để còn về...\nCăn nhà trống đó vẫn đang đợi mình."
+        "Bắt đầu thôi. Xong sớm để còn về..."
     };
 
     private CharacterController _cc;
