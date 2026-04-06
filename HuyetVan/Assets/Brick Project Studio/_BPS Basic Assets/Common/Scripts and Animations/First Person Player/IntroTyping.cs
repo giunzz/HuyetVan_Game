@@ -10,9 +10,9 @@ public class IntroTyping : MonoBehaviour
     public string fullText = "Mình ở căn hộ ngay tầng 1...\nMình nhớ vợ mình hay viết nhật kí...";
 
     public float typingSpeed = 0.05f;
-    public float stayDuration = 2f; // thời gian giữ sau khi hiện xong
+    public float stayDuration = 3f;
 
-    private bool isFinished = false;
+    private bool isTyping = true;
 
     void Start()
     {
@@ -29,25 +29,22 @@ public class IntroTyping : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        isFinished = true;
+        isTyping = false;
 
-        // ⏳ chờ 2 giây
         yield return new WaitForSeconds(stayDuration);
-
-        // 💥 ẩn intro
-        gameObject.SetActive(false);
+        HideIntro();
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StopAllCoroutines();
-            textUI.text = fullText;
-
-            if (!isFinished)
+            if (isTyping)
             {
-                isFinished = true;
+                StopAllCoroutines(); // dừng typing
+                textUI.text = fullText;
+                isTyping = false;
+
                 StartCoroutine(HideAfterDelay());
             }
         }
@@ -56,6 +53,12 @@ public class IntroTyping : MonoBehaviour
     IEnumerator HideAfterDelay()
     {
         yield return new WaitForSeconds(stayDuration);
+        HideIntro();
+    }
+
+    void HideIntro()
+    {
+        Debug.Log("HIDE INTRO"); // 👈 check có chạy không
         gameObject.SetActive(false);
     }
 }

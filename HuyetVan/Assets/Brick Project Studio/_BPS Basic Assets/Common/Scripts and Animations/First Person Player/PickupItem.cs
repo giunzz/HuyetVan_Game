@@ -17,10 +17,10 @@ public class PickupItem : MonoBehaviour
     {
         Debug.Log("Picked up: " + itemName);
 
-        // TODO: add vào inventory nếu bạn có
+        // TODO: inventory
         // InventoryManager.Instance.AddItem(itemName);
 
-        gameObject.SetActive(false); // ẩn object
+        Destroy(gameObject); // 🔥 tốt hơn SetActive(false)
     }
 
     private void OnTriggerEnter(Collider other)

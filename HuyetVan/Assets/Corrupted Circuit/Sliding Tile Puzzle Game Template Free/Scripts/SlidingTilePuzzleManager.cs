@@ -73,12 +73,6 @@ namespace CorruptedCircuit.SlidingTilePuzzle.Core
                 Debug.LogError("SlidingTilePuzzleManager: level.gridSize must be >=2.");
                 return;
             }
-       
-            // ---- ĐÃ SỬA TẠI ĐÂY ----
-            // Tắt dòng tính toán tự động này đi vì nó làm văng Panel ra ngoài màn hình
-            // puzzleParent.SetAnchorCenterKeepSize(); 
-            // -------------------------
-
             FitParent();
             StartCoroutine(StartupRoutine());
 
