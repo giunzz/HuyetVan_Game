@@ -4,24 +4,21 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Pickup
-  - 'ExitDoor '
   - Pickable
-  - Scalpel
-  - 'Corpse '
-  - QTip
-  - NewCorpse
-  - Microscope
+  - Pickup
+  - CinemachineTarget
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Interactable
+  - Ground
   - Water
   - UI
-  - Scalpel
-  - ExitDoor
-  - Player
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -51,3 +48,10 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - Light Layer 1
+  - Light Layer 2
+  - Light Layer 3
+  - Light Layer 4
+  - Light Layer 5
+  - Light Layer 6
+  - Light Layer 7
