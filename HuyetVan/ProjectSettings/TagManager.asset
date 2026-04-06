@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Pickable
   - Pickup
+  - CinemachineTarget
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
