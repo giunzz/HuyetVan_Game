@@ -9,6 +9,12 @@ TagManager:
   - CinemachineTarget
   - Door
   - Key
+  - 'ExitDoor '
+  - NewCorpse
+  - Microscope
+  - QTip
+  - 'Corpse '
+  - Scalpel
   layers:
   - Default
   - TransparentFX
@@ -16,9 +22,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Interactable
+  - Player
+  - ExitDoor
   - 
   - 
   - 
