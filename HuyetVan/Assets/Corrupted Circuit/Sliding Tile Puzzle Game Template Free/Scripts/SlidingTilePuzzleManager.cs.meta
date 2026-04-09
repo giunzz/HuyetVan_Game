@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ce0999ee737687c4fabdb1ac71e6cada
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 30
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 336490
+  packageName: Sliding Tile Puzzle Game Template (Free)
+  packageVersion: 1.0
+  assetPath: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/Scripts/SlidingTilePuzzleManager.cs
+  uploadId: 806788

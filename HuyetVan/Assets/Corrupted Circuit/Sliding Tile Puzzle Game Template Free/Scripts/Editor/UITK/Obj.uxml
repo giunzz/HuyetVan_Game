@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/UI/CustomEditorStyle.uss?fileID=7433441132597879392&amp;guid=8e50cd0dbb83e1641ac9b3ab2e6fcb81&amp;type=3#CustomEditorStyle" />
+    <Style src="project://database/Assets/Corrupted%20Circuit/Sliding%20Tile%20Puzzle%20Game%20Template%20Free/UI/CustomElementStyle.uss?fileID=7433441132597879392&amp;guid=38b6b5f9a9c346243aeb07e741ef3784&amp;type=3#CustomElementStyle" />
+    <uie:ObjectField label="Object Field" />
+</ui:UXML>

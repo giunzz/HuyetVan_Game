@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 9238845bd0dea434cb429d09d4bd87bc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Poppins
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 336490
+  packageName: Sliding Tile Puzzle Game Template (Free)
+  packageVersion: 1.0
+  assetPath: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/UI/Poppins-Medium.ttf
+  uploadId: 806788

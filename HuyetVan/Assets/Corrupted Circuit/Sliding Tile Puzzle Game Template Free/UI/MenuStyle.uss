@@ -1,0 +1,96 @@
+:root {
+}
+
+.text {
+    -unity-font-definition: url("project://database/Assets/Tile-Sliding%20Puzzle%20Game%20Template/UI/Poppins-Medium.ttf?fileID=12800000&guid=9238845bd0dea434cb429d09d4bd87bc&type=3#Poppins-Medium");
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.button {
+    background-image: url("project://database/Assets/Corrupted%20Circuit/Mini%20Games%20Collection/UI%20Toolkit/Icons/ButtonBase.png?fileID=767932574805295549&guid=98478ad7b2c4c35498bba3112cb77e39&type=3#ButtonBase_0");
+    background-color: rgba(0, 0, 0, 0);
+    height: 145px;
+    -unity-slice-scale: 0.15px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.difficulty {
+    background-color: rgb(242, 245, 249);
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgba(0, 0, 0, 0.05);
+    border-right-color: rgba(0, 0, 0, 0.05);
+    border-top-color: rgba(0, 0, 0, 0.05);
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+    margin-left: 20px;
+}
+
+.difficulty-easy {
+    color: rgb(86, 151, 86);
+}
+
+.difficulty-hard {
+    color: rgb(212, 16, 0);
+}
+
+.difficulty-medium {
+    color: rgb(255, 175, 0);
+}
+
+.button:hover {
+    -unity-background-image-tint-color: rgb(224, 224, 224);
+}
+
+.button:active {
+    scale: 0.9 0.9 0.9;
+}
+
+.button-menu {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    flex-shrink: 1;
+    height: 100px;
+    width: 100px;
+}
+
+.unity-button {
+}

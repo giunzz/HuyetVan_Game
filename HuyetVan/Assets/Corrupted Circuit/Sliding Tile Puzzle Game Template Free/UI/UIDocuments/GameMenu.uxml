@@ -1,0 +1,20 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Corrupted%20Circuit/Mini%20Games%20Collection/UI%20Toolkit/MenuStyle.uss?fileID=7433441132597879392&amp;guid=eb66a5447ddfd824f96370cb1c9bb158&amp;type=3#MenuStyle" />
+    <ui:VisualElement style="padding-left: 60px; padding-top: 30px; padding-right: 60px; padding-bottom: 30px; background-color: rgb(255, 255, 255); flex-grow: 1;">
+        <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center;">
+            <ui:Button name="Back" class="button button-menu unity-button--with-icon-only" style="justify-content: center; align-items: center;">
+                <ui:VisualElement style="justify-content: flex-start; align-items: auto; background-image: url(&quot;project://database/Assets/Tile-Sliding%20Puzzle%20Game%20Template/UI/Icon/Arrow%20Left.png?fileID=2800000&amp;guid=8a9605cca7152fc4bbef9451d4171c96&amp;type=3#Arrow Left&quot;); height: 50%; width: 50%; -unity-background-image-tint-color: rgb(0, 0, 0); background-size: contain;" />
+            </ui:Button>
+            <ui:VisualElement style="align-self: center; align-items: center;">
+                <ui:Label text="Level 1" name="Title" class="text" style="font-size: 48px; letter-spacing: 2px; padding-top: 2px; padding-right: 3px; padding-bottom: 2px; padding-left: 3px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+                <ui:Label text="4x4 Grid" name="GridSize" class="text" style="font-size: 31px; letter-spacing: 2px; opacity: 0.4;" />
+            </ui:VisualElement>
+            <ui:Button name="Next" class="button button-menu unity-button--with-icon-only" style="justify-content: center; align-items: center; display: none;">
+                <ui:VisualElement style="justify-content: flex-start; align-items: auto; background-image: url(&quot;project://database/Assets/Tile-Sliding%20Puzzle%20Game%20Template/UI/Icon/Arrow%20Right.png?fileID=2800000&amp;guid=395800a7c7a30f448b61fb690556100f&amp;type=3#Arrow Right&quot;); height: 50%; width: 50%; -unity-background-image-tint-color: rgb(0, 0, 0); background-size: contain;" />
+            </ui:Button>
+            <ui:Button name="Reset" class="button button-menu unity-button--with-icon-only" style="justify-content: center; align-items: center;">
+                <ui:VisualElement style="justify-content: flex-start; align-items: auto; background-image: url(&quot;project://database/Assets/Tile-Sliding%20Puzzle%20Game%20Template/UI/Icon/Progress%20Bar.png?fileID=2800000&amp;guid=692a50acc1b51e747b22a0a765cf262d&amp;type=3#Progress Bar&quot;); height: 50%; width: 50%; -unity-background-image-tint-color: rgb(0, 0, 0); background-size: contain;" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

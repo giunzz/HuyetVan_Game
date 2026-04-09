@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 69b45563861f6bf489d2667f53a1e078
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 13804, guid: 0000000000000000e000000000000000, type: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 336490
+  packageName: Sliding Tile Puzzle Game Template (Free)
+  packageVersion: 1.0
+  assetPath: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/Scripts/Editor/UITK/Obj.uxml
+  uploadId: 806788

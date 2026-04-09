@@ -1,0 +1,17 @@
+Sliding Tile Puzzle Setup — How To Use
+
+1. Open the Resources folder
+   - Go to: Assets/Resources
+   - If it doesn’t exist, create a new folder named Resources
+
+2. Create a new Puzzle Setup asset
+   - Right-click inside the Resources folder
+   - Select: Create → Corrupted Circuit → Sliding Tile Puzzle Setup
+
+3. Fill in the created ScriptableObject
+   - Select the asset and fill in all the required fields such as icons, names, and settings
+
+4. Activate the setup
+   - Click on the Activate button at the top of the inspector
+   - Once the button turns green, your setup is successfully activated and ready to use!
+   - Now load the main menu and click play

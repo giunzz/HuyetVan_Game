@@ -1,0 +1,75 @@
+fileFormatVersion: 2
+guid: 41fdf32b0fea5c449a826f0f5ec35dc3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\UI\perfusion\source\Perfusion\medic 2.bin
+    assetPath: Assets\UI\perfusion\source\Perfusion\medic 2.bin
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\1623130128_11-phonoteka_org-p-tekstura-tkani-flaga-krasivo-14.jpg
+    assetPath: Assets\UI\perfusion\source\Perfusion\1623130128_11-phonoteka_org-p-tekstura-tkani-flaga-krasivo-14.jpg
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\white-crinkled-paper-texture-background.jpg
+    assetPath: Assets\UI\perfusion\source\Perfusion\white-crinkled-paper-texture-background.jpg
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\blue.png
+    assetPath: Assets\UI\perfusion\source\Perfusion\blue.png
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\skin_tex.jpg
+    assetPath: Assets\UI\perfusion\source\Perfusion\skin_tex.jpg
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\pelenka.png
+    assetPath: Assets\UI\perfusion\source\Perfusion\pelenka.png
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\Bloooddd.png
+    assetPath: Assets\UI\perfusion\source\Perfusion\Bloooddd.png
+  - type: 1
+    originalUri: Assets\UI\perfusion\source\Perfusion\beautiful-concept-of-crystalline-water-and-sky.jpg
+    assetPath: Assets\UI\perfusion\source\Perfusion\beautiful-concept-of-crystalline-water-and-sky.jpg
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_ior
+  - type: 2
+    code: 31
+    messages: []
+  - type: 2
+    code: 31
+    messages: []
+  - type: 2
+    code: 31
+    messages: []
+  - type: 2
+    code: 31
+    messages: []
+  - type: 2
+    code: 31
+    messages: []

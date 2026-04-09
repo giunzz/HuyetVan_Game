@@ -1,0 +1,91 @@
+# Blender MTL File: 'kitchen scale.blend'
+# Material Count: 8
+
+newmtl Bronze_Bare
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.500000 C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Textures\\metal textures\\Metal_PBR_Substance_Materials\\Bronze_Copper_Gold\\TexturesCom_Metal_BronzeBare_1K_normal.tif
+refl C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Textures\\metal textures\\Metal_PBR_Substance_Materials\\Bronze_Copper_Gold\\TexturesCom_Metal_BronzeBare_1K_metallic.tif
+
+newmtl Material.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd H:\\BlenderStuff to large for main\\kitchen interior\\Reference\\71toBx35PEL._AC_SL1500_.jpg
+
+newmtl Prism_Glass.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl bronze_detailed
+Ns 650.249991
+Ka 1.000000 1.000000 1.000000
+Kd 0.656089 0.662084 0.660884
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Textures\\fabric\\Fabric_PBR_Substance_Materials\\TexturesCom_Wool_1024_normal.tiff
+
+newmtl painted_metal_light_blue
+Ns 846.810001
+Ka 1.000000 1.000000 1.000000
+Kd 0.649614 0.750489 0.781587
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl stainless_steel_
+Ns 650.249991
+Ka 1.000000 1.000000 1.000000
+Kd 0.656089 0.662084 0.660884
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl stainless_steel_placker
+Ns 650.249991
+Ka 1.000000 1.000000 1.000000
+Kd 0.656089 0.662084 0.660884
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.900000 C:\\Users\\gyzen\\Pictures\\handmade to scale invert_normal.png
+
+newmtl tarnished_metal_screw
+Ns 650.249991
+Ka 1.000000 1.000000 1.000000
+Kd 0.656089 0.662084 0.660884
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Project Files\\Kitchen Scale\\Textures\\tarnished metal screw_normal.png
+map_Kd C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Project Files\\Kitchen Scale\\Textures\\tarnished metal screw_basecolor.png
+map_Ns C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Project Files\\Kitchen Scale\\Textures\\tarnished metal screw_roughness.png
+refl C:\\Users\\gyzen\\Desktop\\Blender Stuff\\Project Files\\Kitchen Scale\\Textures\\tarnished metal screw_metallic.png

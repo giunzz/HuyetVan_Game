@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: a1de12a7965f4a14e812814c59d2bda3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5047964809650070521
+    second: T_Im_Linden_0
+  - first:
+      213: 6287533569116327422
+    second: T_Im_Linden_1
+  - first:
+      213: -1375777601926757386
+    second: T_Im_Linden_2
+  - first:
+      213: 1188201025239154859
+    second: T_Im_Linden_3
+  - first:
+      213: 5367783584666578263
+    second: T_Im_Linden_4
+  - first:
+      213: -2335180989316345565
+    second: T_Im_Linden_5
+  - first:
+      213: -5495551326270146399
+    second: T_Im_Linden_6
+  - first:
+      213: -7815585915000293185
+    second: T_Im_Linden_7
+  - first:
+      213: -6206922624421908291
+    second: T_Im_Linden_8
+  - first:
+      213: 2442225091541602497
+    second: T_Im_Linden_9
+  - first:
+      213: -1114921430702475231
+    second: T_Im_Linden_10
+  - first:
+      213: -3366173149972666036
+    second: T_Im_Linden_11
+  - first:
+      213: 5619975806297393588
+    second: T_Im_Linden_12
+  - first:
+      213: 1686892735121051914
+    second: T_Im_Linden_13
+  - first:
+      213: 7394154193552922895
+    second: T_Im_Linden_14
+  - first:
+      213: 7918014399011880304
+    second: T_Im_Linden_15
+  - first:
+      213: 4199934075843584290
+    second: T_Im_Linden_16
+  - first:
+      213: -6826198828507108045
+    second: T_Im_Linden_17
+  - first:
+      213: -6326413689294018987
+    second: T_Im_Linden_18
+  - first:
+      213: -7072868942862068030
+    second: T_Im_Linden_19
+  - first:
+      213: 2494989915095842303
+    second: T_Im_Linden_20
+  - first:
+      213: 5520340483262293391
+    second: T_Im_Linden_21
+  - first:
+      213: -6517408076154796420
+    second: T_Im_Linden_22
+  - first:
+      213: -3690533254394601422
+    second: T_Im_Linden_23
+  - first:
+      213: 8570221173969809030
+    second: T_Im_Linden_24
+  - first:
+      213: -7449187974245691951
+    second: T_Im_Linden_25
+  - first:
+      213: 7398030427139900560
+    second: T_Im_Linden_26
+  - first:
+      213: -134877558832871096
+    second: T_Im_Linden_27
+  - first:
+      213: 6850151993237165179
+    second: T_Im_Linden_28
+  - first:
+      213: 8615133777829177789
+    second: T_Im_Linden_29
+  - first:
+      213: -8295494474590787881
+    second: T_Im_Linden_30
+  - first:
+      213: 7983153243697262294
+    second: T_Im_Linden_31
+  - first:
+      213: 8638724205505370384
+    second: T_Im_Linden_32
+  - first:
+      213: 9183551538340704110
+    second: T_Im_Linden_33
+  - first:
+      213: -8602177362291623826
+    second: T_Im_Linden_34
+  - first:
+      213: -7150904872463513606
+    second: T_Im_Linden_35
+  - first:
+      213: -5585134577136270087
+    second: T_Im_Linden_36
+  - first:
+      213: -2846566966868094352
+    second: T_Im_Linden_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T_Im_Linden_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1709
+        width: 188
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f36dd5cf39fd0640800000000000000
+      internalID: 5047964809650070521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_1
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1709
+        width: 193
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdc584e77ec14750800000000000000
+      internalID: 6287533569116327422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_2
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1709
+        width: 188
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3873b6f8148ece0800000000000000
+      internalID: -1375777601926757386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_3
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1709
+        width: 194
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0822f79865d7010800000000000000
+      internalID: 1188201025239154859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_4
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1709
+        width: 199
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d69330bb23e7a40800000000000000
+      internalID: 5367783584666578263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_5
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 1709
+        width: 193
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321dd853345c79fd0800000000000000
+      internalID: -2335180989316345565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1368
+        width: 197
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a8bdb87f21ebb3b0800000000000000
+      internalID: -5495551326270146399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1696
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb87cd0e406798390800000000000000
+      internalID: -7815585915000293185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_8
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 1368
+        width: 200
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db03ffe32c49cd9a0800000000000000
+      internalID: -6206922624421908291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_9
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1383
+        width: 188
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c012e208c684e120800000000000000
+      internalID: 2442225091541602497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_10
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1395
+        width: 191
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128328aadd00780f0800000000000000
+      internalID: -1114921430702475231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_11
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1395
+        width: 198
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49eb67da53f841d0800000000000000
+      internalID: -3366173149972666036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_12
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 1385
+        width: 194
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b945ac483a2efd40800000000000000
+      internalID: 5619975806297393588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1026
+        width: 204
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01d31b410c096710800000000000000
+      internalID: 1686892735121051914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_14
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1056
+        width: 203
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09df2920105d9660800000000000000
+      internalID: 7394154193552922895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_15
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1090
+        width: 189
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07df78bf42072ed60800000000000000
+      internalID: 7918014399011880304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_16
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1097
+        width: 193
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22127be2ac9294a30800000000000000
+      internalID: 4199934075843584290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_17
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1060
+        width: 206
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d65ac05587441a0800000000000000
+      internalID: -6826198828507108045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_18
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 1026
+        width: 211
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5562673b4401438a0800000000000000
+      internalID: -6326413689294018987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_19
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 685
+        width: 211
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c650dd8b2f18dd90800000000000000
+      internalID: -7072868942862068030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_20
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 717
+        width: 206
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd3877db1cff9220800000000000000
+      internalID: 2494989915095842303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_21
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 752
+        width: 195
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85ae08eb603c9c40800000000000000
+      internalID: 5520340483262293391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_22
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 756
+        width: 188
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76088ca2e38d85a0800000000000000
+      internalID: -6517408076154796420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_23
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 721
+        width: 204
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2302b04fe8798ccc0800000000000000
+      internalID: -3690533254394601422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_24
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 685
+        width: 205
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e600130ca8fe670800000000000000
+      internalID: 8570221173969809030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 344
+        width: 200
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd49f1410b2f9890800000000000000
+      internalID: -7449187974245691951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_26
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 344
+        width: 197
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094843f1a751ba660800000000000000
+      internalID: 7398030427139900560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_27
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 672
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84948992391d02ef0800000000000000
+      internalID: -134877558832871096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_28
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 363
+        width: 194
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74d556b1f0a01f50800000000000000
+      internalID: 6850151993237165179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_29
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 377
+        width: 198
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db92af7a68a1f8770800000000000000
+      internalID: 8615133777829177789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_30
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 380
+        width: 191
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6eccd0abb70ec80800000000000000
+      internalID: -8295494474590787881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_31
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 368
+        width: 188
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de251e149bd9ce60800000000000000
+      internalID: 7983153243697262294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_32
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 193
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01957bd15e9e2e770800000000000000
+      internalID: 8638724205505370384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_33
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 2
+        width: 199
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f2a43b777827f70800000000000000
+      internalID: 9183551538340704110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_34
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 2
+        width: 194
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6873b9e34dee9880800000000000000
+      internalID: -8602177362291623826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_35
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 2
+        width: 188
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7c336d7e1e2cc90800000000000000
+      internalID: -7150904872463513606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_36
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 3
+        width: 193
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f48a0381bd9d72b0800000000000000
+      internalID: -5585134577136270087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Im_Linden_37
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 3
+        width: 189
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0725776ec66fe78d0800000000000000
+      internalID: -2846566966868094352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T_Im_Linden_0: 5047964809650070521
+      T_Im_Linden_1: 6287533569116327422
+      T_Im_Linden_10: -1114921430702475231
+      T_Im_Linden_11: -3366173149972666036
+      T_Im_Linden_12: 5619975806297393588
+      T_Im_Linden_13: 1686892735121051914
+      T_Im_Linden_14: 7394154193552922895
+      T_Im_Linden_15: 7918014399011880304
+      T_Im_Linden_16: 4199934075843584290
+      T_Im_Linden_17: -6826198828507108045
+      T_Im_Linden_18: -6326413689294018987
+      T_Im_Linden_19: -7072868942862068030
+      T_Im_Linden_2: -1375777601926757386
+      T_Im_Linden_20: 2494989915095842303
+      T_Im_Linden_21: 5520340483262293391
+      T_Im_Linden_22: -6517408076154796420
+      T_Im_Linden_23: -3690533254394601422
+      T_Im_Linden_24: 8570221173969809030
+      T_Im_Linden_25: -7449187974245691951
+      T_Im_Linden_26: 7398030427139900560
+      T_Im_Linden_27: -134877558832871096
+      T_Im_Linden_28: 6850151993237165179
+      T_Im_Linden_29: 8615133777829177789
+      T_Im_Linden_3: 1188201025239154859
+      T_Im_Linden_30: -8295494474590787881
+      T_Im_Linden_31: 7983153243697262294
+      T_Im_Linden_32: 8638724205505370384
+      T_Im_Linden_33: 9183551538340704110
+      T_Im_Linden_34: -8602177362291623826
+      T_Im_Linden_35: -7150904872463513606
+      T_Im_Linden_36: -5585134577136270087
+      T_Im_Linden_37: -2846566966868094352
+      T_Im_Linden_4: 5367783584666578263
+      T_Im_Linden_5: -2335180989316345565
+      T_Im_Linden_6: -5495551326270146399
+      T_Im_Linden_7: -7815585915000293185
+      T_Im_Linden_8: -6206922624421908291
+      T_Im_Linden_9: 2442225091541602497
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

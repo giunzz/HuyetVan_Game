@@ -6,14 +6,31 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/00_Home.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/Scenes/Main
+      Menu.unity
+    guid: 28e943d965b7f664dab7c826a410cf3e
   - enabled: 1
-    path: Assets/Scenes/01_Intro.unity
-    guid: b3d10dbc7fcae234e813982db7f72038
+    path: Assets/Corrupted Circuit/Sliding Tile Puzzle Game Template Free/Scenes/Levels.unity
+    guid: c54d9b8edbba5c045b37c774029a68c0
   - enabled: 1
     path: Assets/Morgue Room PBR/morgue scene/morgue.unity
     guid: 845128cf95f90184697fffb609346de8
+  - enabled: 1
+    path: Assets/Scenes/01_apartment.unity
+    guid: fd453247038b3ab4e8264078fb1f1dbe
+  - enabled: 1
+    path: Assets/Scenes/00_Home.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/10_2d.unity
+    guid: 71fa650da986bc246bfc30127959902e
+  - enabled: 1
+    path: Assets/Scenes/MARKET.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/21_AbandonHouse.unity
+    guid: 901b3a5c5c99efc4f8a1035455afc58f
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

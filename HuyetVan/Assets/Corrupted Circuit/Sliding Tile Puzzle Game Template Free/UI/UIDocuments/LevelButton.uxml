@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Corrupted%20Circuit/Mini%20Games%20Collection/UI%20Toolkit/MenuStyle.uss?fileID=7433441132597879392&amp;guid=eb66a5447ddfd824f96370cb1c9bb158&amp;type=3#MenuStyle" />
+    <ui:Button class="button">
+        <ui:VisualElement style="justify-content: flex-start; flex-direction: row; align-items: auto; height: 50%;">
+            <ui:Label text="Level 1" name="Title" class="title text" style="font-size: 40px; letter-spacing: 8px; margin-bottom: -10px;" />
+            <ui:Label text="Easy" name="Difficulty" class="difficulty text" />
+        </ui:VisualElement>
+        <ui:VisualElement style="height: 50%; width: 50%;">
+            <ui:Label text="4x4 Grid" name="GridSize" class="text" style="font-size: 31px; letter-spacing: 2px; opacity: 0.4; -unity-text-align: middle-left;" />
+        </ui:VisualElement>
+    </ui:Button>
+</ui:UXML>
