@@ -1,12 +1,15 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class ApartmentPuzzle : MonoBehaviour
 {
     [Header("UI")]
     public GameObject puzzleCanvas;
     public GameObject diaryPanel;
+    [Header("Scene Transition")]
+    public string nextSceneName = "10_2d";
+    public float delayBeforeLoad = 2f;
 
     [Header("Text")]
     public TextMeshProUGUI textUI;
@@ -80,6 +83,10 @@ Quán cơm Bà Ba gần cầu Phao...
         yield return WaitOrClick();
 
         yield return StartCoroutine(TypeText(text3));
+
+        yield return new WaitForSeconds(delayBeforeLoad);
+
+        SceneManager.LoadScene(nextSceneName);
     }
 
     // 🧠 Typing + skip

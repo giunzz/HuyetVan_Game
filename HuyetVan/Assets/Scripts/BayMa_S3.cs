@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections; // Bắt buộc có dòng này để xài bộ đếm thời gian
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BayMa_S3 : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class BayMa_S3 : MonoBehaviour
     
     private Balo baloNhanVat;
     private bool daKichHoat = false;  // Tránh hù 2 lần liên tục
+    [Header("Scene Transition")]
+    public string nextSceneName = "00_Home";
+    public float delayBeforeLoad = 3f;
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,24 +31,28 @@ public class BayMa_S3 : MonoBehaviour
     }
 
     // Chuỗi kịch bản đạo diễn:
-    IEnumerator KichHoatJumpscare()
+        IEnumerator KichHoatJumpscare()
     {
-        // 1. Phóng mặt con ma che kín màn hình
+        // 1. Hiện jumpscare
         hinhMaUI.SetActive(true);
-        // (Lưu ý: Sau này có âm thanh hét thì code lệnh Play ở đây)
 
-        // 2. Dừng thời gian đợi 1.5 giây cho não người chơi xử lý cú shock
         yield return new WaitForSeconds(1.5f);
 
-        // 3. Tắt mặt ma, Sập màn hình đen Ending xuống
+        // 2. Hiện ending
         hinhMaUI.SetActive(false);
         manHinhEnding.SetActive(true);
 
-        // 4. Khóa cứng game lại (Đóng băng mọi thứ)
-        Time.timeScale = 0f; 
-        
-        // Giải phóng con trỏ chuột ra để người chơi tự tắt game
+        // 3. Dừng game
+        Time.timeScale = 0f;
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // ❗ DÙNG realtime vì timeScale = 0
+        yield return new WaitForSecondsRealtime(delayBeforeLoad);
+
+        // 4. Load scene
+        Time.timeScale = 1f; // reset lại trước khi load
+        SceneManager.LoadScene(nextSceneName);
     }
 }

@@ -21,6 +21,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/00_Home.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/10_2d.unity
+    guid: 71fa650da986bc246bfc30127959902e
+  - enabled: 1
+    path: Assets/Scenes/MARKET.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/21_AbandonHouse.unity
+    guid: 901b3a5c5c99efc4f8a1035455afc58f
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

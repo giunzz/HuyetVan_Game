@@ -8969,6 +8969,8 @@ MonoBehaviour:
   minigamePanel: {fileID: 1665038762}
   letterPanel: {fileID: 1245670438}
   letterText: {fileID: 195545130}
+  nextSceneName: 21_AbandonHouse
+  delayBeforeLoad: 3
 --- !u!4 &927449415
 Transform:
   m_ObjectHideFlags: 0
@@ -12718,8 +12720,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12787,7 +12789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 520}
+  m_AnchoredPosition: {x: 0, y: 370}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1341407685
@@ -20148,8 +20150,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.63962626, y: 0.21699998, z: 0.6393781}
-  m_Center: {x: -0.00017388165, y: 0.108417496, z: 0.00026488304}
+  m_Size: {x: 1.0296907, y: 0.7356386, z: 0.6393781}
+  m_Center: {x: 0.19485834, y: 0.36773682, z: 0.00026488307}
 --- !u!1001 &2067665585
 PrefabInstance:
   m_ObjectHideFlags: 0

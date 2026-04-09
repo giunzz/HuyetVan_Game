@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StoryManager : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class StoryManager : MonoBehaviour
     [Header("Letter UI")]
     public GameObject letterPanel;
     public TextMeshProUGUI letterText;
+    [Header("Scene Transition")]
+    public string nextSceneName = "21_AbandonHouse";
+    public float delayBeforeLoad = 3f;
 
     private int orderCount = 0;
     private bool isStocked = false; // Đã dọn hàng xong chưa
@@ -145,5 +149,13 @@ public class StoryManager : MonoBehaviour
     void FinishDay()
     {
         infoText.text = "Hết ca làm việc! Trời cũng sắp tối rồi...";
+
+        // ⏳ delay rồi chuyển scene
+        Invoke(nameof(LoadNextScene), delayBeforeLoad);
+    }
+
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene(nextSceneName);
     }
 }

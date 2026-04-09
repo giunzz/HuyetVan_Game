@@ -34,7 +34,7 @@ public class CaiGieng_S3 : MonoBehaviour
         if (dungGan && Input.GetKeyDown(KeyCode.E))
         {
             // KIỂM TRA ĐIỀU KIỆN 9 MẢNH GƯƠNG
-            if (baloNhanVat.soManhGuong < 9)
+            if (baloNhanVat.soManhGuong < 1)
             {
                 // PHẠT: Tua ngược thời gian (Load lại màn chơi)
                 Debug.Log("Bạn chưa đủ linh hồn mảnh gương! Tua ngược...");
