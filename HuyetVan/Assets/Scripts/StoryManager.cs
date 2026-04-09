@@ -1,21 +1,21 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance;
 
     [Header("Main UI")]
+    [Header("Scene Transition")]
+    public string nextSceneName = "21_AbandonHouse";
+    public float delayBeforeLoad = 2f;
     public TextMeshProUGUI infoText;
     public GameObject minigamePanel;
 
     [Header("Letter UI")]
     public GameObject letterPanel;
     public TextMeshProUGUI letterText;
-    [Header("Scene Transition")]
-    public string nextSceneName = "21_AbandonHouse";
-    public float delayBeforeLoad = 3f;
 
     private int orderCount = 0;
     private bool isStocked = false; // Đã dọn hàng xong chưa
@@ -95,7 +95,7 @@ public class StoryManager : MonoBehaviour
         orderCount++;
 
         if (orderCount < 3)
-        {
+        { 
             infoText.text = "Giao thành công! Đang chờ đơn mới...";
             Invoke("ShowNextOrder", 2f);
         }
@@ -118,7 +118,8 @@ public class StoryManager : MonoBehaviour
 
         if (letterText != null)
         {
-            letterText.text = "KÍNH GỬI CHỦ QUÁN,\n\nĐồ giao tới bị héo quá, không tươi chút nào. Khó chịu thật đấy, nhưng thôi tôi cũng bỏ qua cho lần này...\n\n- Khách hàng ẩn danh -";
+            letterText.text = "KÍNH GỬI CHỦ QUÁN,\n\nĐồ giao tới bị héo quá, không tươi chút nào. Khó chịu thật đấy, nhưng thôi tôi cũng bỏ qua cho lần này...\nTối nay lại phải đi qua khu sau nhà à?\n" +
+                        "Ban ngày thì không sao... Nhưng nhớ kỹ lời ta dặn. Nếu đi ngang qua cái giếng cạn, cứ nhìn thẳng mà bước. Đừng có tò mò.\n\n- Khách hàng ẩn danh -";
         }
     }
 
@@ -135,22 +136,20 @@ public class StoryManager : MonoBehaviour
 
     void PlaySpookyVoice()
     {
-        infoText.text = "Tối nay lại phải đi qua khu sau nhà à?\n" +
-                        "Ban ngày thì không sao... Nhưng nhớ kỹ lời ta dặn. Nếu đi ngang qua cái giếng cạn, cứ nhìn thẳng mà bước. Đừng có tò mò.";
-        Invoke("ProtagonistMonologue", 8f);
+        infoText.text = "Cái giếng đó cạn đã lâu rồi mà nhỉ? hmm..."; // Lời thoại đầu tiên
+        Invoke("ProtagonistMonologue", 2f);
     }
 
     void ProtagonistMonologue()
     {
-        infoText.text = "Cái giếng đó cạn đã lâu rồi mà nhỉ? Không lẽ có gì dưới đó sao? Mà thôi cứ nghe theo cho chắc vậy.";
-        Invoke("FinishDay", 6f);
+        infoText.text = " Không lẽ có gì dưới đó sao? Mà thôi cứ nghe theo cho chắc vậy.";
+        Invoke("FinishDay", 2f);
     }
 
     void FinishDay()
     {
         infoText.text = "Hết ca làm việc! Trời cũng sắp tối rồi...";
 
-        // ⏳ delay rồi chuyển scene
         Invoke(nameof(LoadNextScene), delayBeforeLoad);
     }
 
