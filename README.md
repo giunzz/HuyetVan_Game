@@ -7,3 +7,6 @@ Một số hình ảnh game:
 ![alt text](img/image.png)
 ![alt text](image.png)
 ![alt text](img/image-1.png)
+
+
+    
