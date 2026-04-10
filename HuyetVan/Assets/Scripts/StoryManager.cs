@@ -28,7 +28,7 @@ public class StoryManager : MonoBehaviour
 
     void Start()
     {
-        infoText.text = "Nhiệm vụ đầu ngày: Dọn 1 thùng Táo và 1 thùng Cam lên 2 quầy!";
+        infoText.text = "Nhiệm vụ đầu ngày: Dọn 1 thùng Táo và 1 thùng Cam lên 2 quầy!\n Đặt mỗi thùng lên 1 cái bàn ở trước quầy ";
     }
 
     // GỌI KHI ĐẶT THÙNG LÊN BÀN
