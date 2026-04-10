@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849ab7a9586bc8c4e91475516a9c3d43, type: 3}
+  m_Name: _SetUp 1
+  m_EditorClassIdentifier: Assembly-CSharp::Setup
+  _IsActivated: 0
+  _Icon: {fileID: -7529519826213007682, guid: 5ea65be53f6c4cb40ae9dceebb2ae22c, type: 3}
+  _Name: Tile Puzzle
+  _Catchline: "Catch your, Sliding \nTiles."
+  _Levels:
+  - sourceTextures:
+    - {fileID: 2800000, guid: 9234f47bee5c81d4bb44b39cfa8dbc61, type: 3}
+    - {fileID: 2800000, guid: e041e298db8500b4a9a37dbdb6ae1cd1, type: 3}
+    Difficulty: 0
+    gridSize: {x: 3, y: 3}
+  - sourceTextures:
+    - {fileID: 2800000, guid: dd469fea00a60a94eb28f4051971abf7, type: 3}
+    - {fileID: 2800000, guid: 141b3ee07140116449e2a6b21fba3de1, type: 3}
+    Difficulty: 0
+    gridSize: {x: 2, y: 2}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 8832d108d4507014096a3a36a5bc360d, type: 3}
+    - {fileID: 2800000, guid: d18c5c64d4a19724aa7676021a6743a1, type: 3}
+    Difficulty: 0
+    gridSize: {x: 3, y: 4}
+  - sourceTextures:
+    - {fileID: 2800000, guid: c89b3d7668f5d6b4b9833b2c31f1ee74, type: 3}
+    - {fileID: 2800000, guid: c32d41a118cf5244d9f10064d724b721, type: 3}
+    Difficulty: 0
+    gridSize: {x: 3, y: 3}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 0be303756bb18144a949d9e107c9a8de, type: 3}
+    - {fileID: 2800000, guid: b81d3f8786df296488042bd4a4efb998, type: 3}
+    Difficulty: 0
+    gridSize: {x: 2, y: 4}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 596357c0e2cffd74d9d1f68d24e8173d, type: 3}
+    - {fileID: 2800000, guid: 9e711b28248a3c442a9f21a27f624075, type: 3}
+    Difficulty: 0
+    gridSize: {x: 4, y: 2}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 7f31356b446dc57499e5bbf8dff49ac3, type: 3}
+    - {fileID: 2800000, guid: b1d68d625bde25248ab90e902d8722cd, type: 3}
+    Difficulty: 1
+    gridSize: {x: 3, y: 4}
+  - sourceTextures:
+    - {fileID: 2800000, guid: a199dde6f7e5fec408198f4e038b29f9, type: 3}
+    - {fileID: 2800000, guid: c372bbd99e66357489dec581bbbb83b4, type: 3}
+    Difficulty: 1
+    gridSize: {x: 4, y: 3}
+  - sourceTextures:
+    - {fileID: 2800000, guid: e03c3df670863724cac2ed4a63cf1722, type: 3}
+    - {fileID: 2800000, guid: 13109339632ffa34484a8ebc2144ed1e, type: 3}
+    Difficulty: 1
+    gridSize: {x: 4, y: 4}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 8a0bee37fdfa79343af71a20a8c7f594, type: 3}
+    - {fileID: 2800000, guid: a7c55424c808d4f429566a0fbb9ab74d, type: 3}
+    Difficulty: 1
+    gridSize: {x: 5, y: 2}
+  - sourceTextures:
+    - {fileID: 2800000, guid: d0a59ae4de5c9a8478da2a8d0d2bea5c, type: 3}
+    - {fileID: 2800000, guid: 18c5f8cb28d80a64097ac40f2f888e49, type: 3}
+    Difficulty: 2
+    gridSize: {x: 3, y: 5}
+  - sourceTextures:
+    - {fileID: 2800000, guid: f4605e51671b9954595ef3bb29de6ad7, type: 3}
+    - {fileID: 2800000, guid: 535b139d40f56bf4d95cd62b409d5400, type: 3}
+    Difficulty: 2
+    gridSize: {x: 5, y: 3}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 6016fc6a0674c1f4d935e362319c95bf, type: 3}
+    - {fileID: 2800000, guid: ef0b98acb707ffd4f81108fa88666028, type: 3}
+    Difficulty: 2
+    gridSize: {x: 4, y: 5}
+  - sourceTextures:
+    - {fileID: 2800000, guid: fcf2b6f706511554289d2d3880af3a6f, type: 3}
+    - {fileID: 2800000, guid: 296669fc74925eb4da99b21ce2d27f9f, type: 3}
+    Difficulty: 2
+    gridSize: {x: 5, y: 4}
+  - sourceTextures:
+    - {fileID: 2800000, guid: 03d2cf3930c426e48aba85632239635b, type: 3}
+    - {fileID: 2800000, guid: f958404964f9d6246a7a20b229c28a41, type: 3}
+    Difficulty: 2
+    gridSize: {x: 5, y: 5}
+  _GeneralSettings:
+    padding: {x: 0, y: 0}
+    pixelsPerUnit: 100
+    maxParentSize: {x: 500, y: 800}
+    tilePrefab: {fileID: 3341834277127186884, guid: 9e8fa16680392124cac7ba154b36ed90, type: 3}
+    allowUpscale: 1
+    clearParentBeforeCreate: 0
+    startDelay: 0.2
+    fadeDuration: 2
+    fadeInDuration: 1.5
+    moveDuration: 0.1
+    moveCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    shuffleMoves: 0
+    perFrame: 5
