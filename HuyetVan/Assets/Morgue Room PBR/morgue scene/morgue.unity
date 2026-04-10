@@ -5598,7 +5598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameIntro
   subtitleText: {fileID: 1724187054}
   fadePanel: {fileID: 467489766}
-  player: {fileID: 0}
+  player: {fileID: 1721655154}
 --- !u!4 &1096225331
 Transform:
   m_ObjectHideFlags: 0
@@ -7964,7 +7964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1927095934725912879, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: speed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1927095934725912879, guid: a9b081014bad86f4a80b60284279d21b, type: 3}
       propertyPath: gravity
