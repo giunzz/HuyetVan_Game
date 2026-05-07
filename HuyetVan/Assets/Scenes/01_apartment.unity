@@ -77425,7 +77425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CorruptedCircuit.SlidingTilePuzzle.Core.SlidingTilePuzzleManager
   puzzleParent: {fileID: 174270339}
-  customSetupData: {fileID: 11400000, guid: 7c44ba537ad9d79479eae33f2755d538, type: 2}
+  customSetupData: {fileID: 11400000, guid: 6b09f5449c0160c45990c74419aa15f6, type: 2}
   levelIndexToPlay: 0
   OnProgress:
     m_PersistentCalls:

@@ -21,7 +21,7 @@ MonoBehaviour:
     - {fileID: 2800000, guid: 9234f47bee5c81d4bb44b39cfa8dbc61, type: 3}
     - {fileID: 2800000, guid: e041e298db8500b4a9a37dbdb6ae1cd1, type: 3}
     Difficulty: 0
-    gridSize: {x: 3, y: 3}
+    gridSize: {x: 2, y: 2}
   - sourceTextures:
     - {fileID: 2800000, guid: dd469fea00a60a94eb28f4051971abf7, type: 3}
     - {fileID: 2800000, guid: 141b3ee07140116449e2a6b21fba3de1, type: 3}
